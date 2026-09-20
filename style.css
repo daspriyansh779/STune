@@ -8,17 +8,18 @@ html {
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevents horizontal scrolling, but allows vertical scrolling */
-  /* Animated Deep Gradient Background */
-  background: linear-gradient(-45deg, #140a1c, #190f21, #22172a, #312639);
+  overflow-x: hidden; /* Prevents horizontal scrolling, allows vertical */
+  
+  /* Richer, deeper animated gradient */
+  background: linear-gradient(-45deg, #140a1c, #1f112a, #2a1635, #3c1e45);
   background-size: 400% 400%;
-  animation: smoothGradientBG 15s ease infinite;
+  animation: smoothGradientBG 18s ease-in-out infinite;
 }
 
 main > :first-child { margin-top: 0 !important; }
 main > :last-child { margin-bottom: 0 !important; }
 
-/* Hide default scrollbars (Delete these two lines if you want visible scrollbars) */
+/* Hide default scrollbars */
 ::-webkit-scrollbar { display: none; }
 * { -ms-overflow-style: none; scrollbar-width: none; }
 
@@ -31,10 +32,10 @@ main > :last-child { margin-bottom: 0 !important; }
   100% { background-position: 0% 50%; }
 }
 
-/* Eye-catching glowing pulse for sections/cards */
+/* Premium, soft glowing pulse for sections/cards */
 @keyframes ambientGlow {
   0% { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(244, 166, 205, 0.05); }
-  50% { box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(244, 166, 205, 0.15); }
+  50% { box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(244, 166, 205, 0.2); transform: translateY(-5px) scale(1.01); }
   100% { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(244, 166, 205, 0.05); }
 }
 
@@ -42,40 +43,41 @@ main > :last-child { margin-bottom: 0 !important; }
    SECTION & CARD HOVER EFFECTS (Professional Polish)
 ========================================================================= */
 section, .rounded-xl {
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: transform, box-shadow;
 }
 
 section:hover, .rounded-xl:hover {
-  transform: translateY(-4px);
-  animation: ambientGlow 3s infinite;
+  animation: ambientGlow 4s ease-in-out infinite;
 }
 
 /* Spotify Track Row Styling */
 .spotify-track-row {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border-left: 2px solid transparent;
+  border-left: 3px solid transparent;
 }
 
 .spotify-track-row:hover {
-  background-color: rgba(60, 48, 68, 0.7);
-  transform: translateX(6px);
-  border-left: 2px solid #ffcbe2; /* Subtle accent line on hover */
+  background-color: rgba(255, 203, 226, 0.1);
+  transform: translateX(8px);
+  border-left: 3px solid #ffcbe2;
 }
 
 .spotify-track-row.playing-row {
-  background-color: rgba(244, 166, 205, 0.15);
-  border-left: 2px solid #ffcbe2;
+  background-color: rgba(244, 166, 205, 0.2);
+  border-left: 3px solid #ffcbe2;
+  box-shadow: inset 0 0 20px rgba(244, 166, 205, 0.1);
 }
 
 .spotify-track-row.playing-row-bts {
-  background-color: rgba(217, 185, 255, 0.18);
-  border-left: 2px solid #d9b9ff;
+  background-color: rgba(217, 185, 255, 0.2);
+  border-left: 3px solid #d9b9ff;
+  box-shadow: inset 0 0 20px rgba(217, 185, 255, 0.1);
 }
 
 /* =========================================================================
-   LOGIN PAGE SPECIFIC ANIMATIONS (Stars, Particles, Cat)
+   LOGIN PAGE ANIMATIONS (Stars, Particles, Cat)
 ========================================================================= */
-/* Elevate the container so it isn't hidden by the background blobs */
 #particles-container {
   z-index: 5 !important;
 }
@@ -83,79 +85,84 @@ section:hover, .rounded-xl:hover {
 /* Floating Star Text Symbols */
 .login-particle {
   color: #ffcbe2 !important; 
-  animation: twinkleFloat 4s ease-in-out infinite alternate;
-  filter: drop-shadow(0 0 10px rgba(255, 203, 226, 0.9));
+  animation: twinkleFloat 5s ease-in-out infinite alternate !important;
+  filter: drop-shadow(0 0 12px rgba(255, 203, 226, 0.8));
+  will-change: transform, opacity;
 }
 
 /* Glowing Rounded Orbs */
 .login-glow-orb {
-  animation: twinkleFloat 3s ease-in-out infinite alternate;
-  box-shadow: 0 0 12px 3px currentColor;
+  animation: orbFloat 6s ease-in-out infinite alternate !important;
+  box-shadow: 0 0 15px 4px currentColor;
+  will-change: transform, opacity, box-shadow;
 }
 
-/* Enhanced Floating & Fading Animation */
 @keyframes twinkleFloat {
-  0% { 
-    transform: translateY(0) scale(0.6) rotate(0deg); 
-    opacity: 0.1; 
-    filter: brightness(0.8); 
-  }
-  100% { 
-    transform: translateY(-40px) scale(1.3) rotate(20deg); 
-    opacity: 1; 
-    filter: brightness(1.5); 
-  }
+  0% { transform: translateY(0) translateX(0) scale(0.7) rotate(0deg); opacity: 0.3 !important; }
+  100% { transform: translateY(-30px) translateX(15px) scale(1.2) rotate(45deg); opacity: 1 !important; filter: brightness(1.5); }
+}
+
+@keyframes orbFloat {
+  0% { transform: translateY(0) scale(0.8); opacity: 0.2 !important; }
+  100% { transform: translateY(-40px) scale(1.5); opacity: 0.9 !important; box-shadow: 0 0 25px 6px currentColor; }
 }
 
 /* Breathing / Purring Animation for the Cat SVG */
 .cat-purr svg {
   transform-origin: bottom center;
-  animation: animalBreathe 2.5s ease-in-out infinite;
+  animation: animalBreathe 3s ease-in-out infinite;
+  will-change: transform, filter;
 }
 
 @keyframes animalBreathe {
-  0% { transform: scaleY(1) scaleX(1) translateY(0); }
-  50% { transform: scaleY(1.04) scaleX(0.98) translateY(-2px); }
-  100% { transform: scaleY(1) scaleX(1) translateY(0); }
+  0% { transform: scaleY(1) scaleX(1) translateY(0); filter: drop-shadow(0 4px 12px rgba(244,166,205,0.25)); }
+  50% { transform: scaleY(1.05) scaleX(0.97) translateY(-3px); filter: drop-shadow(0 10px 20px rgba(244,166,205,0.5)); }
+  100% { transform: scaleY(1) scaleX(1) translateY(0); filter: drop-shadow(0 4px 12px rgba(244,166,205,0.25)); }
 }
+
 /* =========================================================================
-   SAKURA FLOWER FALLING ANIMATION (Main Page)
+   SAKURA FLOWER FALLING ANIMATION (Main Page - 3D Effect)
 ========================================================================= */
 .sakura-petal {
   position: fixed;
   top: -10%;
-  z-index: 45 !important; /* Forces petals to fall IN FRONT of the cards but behind the header */
+  z-index: 45 !important;
   pointer-events: none;
-  background: linear-gradient(135deg, #ffcbe2, #feafd6);
-  border-radius: 15px 0px 15px 0px; /* Petal shape */
-  box-shadow: 0 0 10px rgba(255, 203, 226, 0.6);
+  background: linear-gradient(135deg, #ffcbe2, #fca5cf);
+  border-radius: 15px 2px 15px 2px; /* More realistic petal shape */
+  box-shadow: 0 0 12px rgba(255, 203, 226, 0.6);
   opacity: 0;
   animation: fall linear infinite, sway ease-in-out infinite alternate;
+  will-change: transform, top, opacity;
 }
 
 @keyframes fall {
-  0% { top: -10%; opacity: 0; transform: rotate(0deg) scale(0.8); }
-  10% { opacity: 0.9; }
-  90% { opacity: 0.9; }
-  100% { top: 110%; opacity: 0; transform: rotate(720deg) scale(1.2); }
+  0% { top: -10%; opacity: 0; transform: rotate3d(1, 1, 0, 0deg) scale(0.8); }
+  15% { opacity: 0.9; }
+  85% { opacity: 0.9; }
+  100% { top: 110%; opacity: 0; transform: rotate3d(1, 1, 1, 720deg) scale(1.2); }
 }
 
 @keyframes sway {
-  0% { margin-left: -30px; }
-  100% { margin-left: 50px; }
+  0% { margin-left: -40px; transform: rotateZ(-15deg); }
+  100% { margin-left: 60px; transform: rotateZ(15deg); }
 }
 
 /* =========================================================================
    MUSIC PLAYER ANIMATIONS
 ========================================================================= */
-/* Spinning Disc Animation */
 @keyframes spinDisc {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-.rotating-disc { animation: spinDisc 10s linear infinite; }
-.rotating-disc.paused { animation-play-state: paused; }
+.rotating-disc { 
+  animation: spinDisc 8s linear infinite; 
+  will-change: transform;
+}
+.rotating-disc.paused { 
+  animation-play-state: paused; 
+}
 
 /* =========================================================================
    CUSTOM DRAGGABLE TIMELINE & VOLUME SLIDERS
@@ -169,41 +176,41 @@ input[type=range].custom-slider {
   transition: background 0.15s ease, transform 0.2s ease;
 }
 
-/* WebKit (Chrome, Safari, Edge) Slider Thumb */
+/* WebKit Thumb */
 input[type=range].custom-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #ffcbe2;
-  box-shadow: 0 0 8px rgba(255, 203, 226, 0.8);
+  box-shadow: 0 0 10px rgba(255, 203, 226, 0.9);
   cursor: pointer;
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease;
 }
 
 input[type=range].custom-slider:hover::-webkit-slider-thumb {
-  transform: scale(1.5);
+  transform: scale(1.6);
   background: #ffffff;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 1);
 }
 
-/* Firefox Slider Thumb */
+/* Firefox Thumb */
 input[type=range].custom-slider::-moz-range-thumb {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   border: none;
   background: #ffcbe2;
-  box-shadow: 0 0 8px rgba(255, 203, 226, 0.8);
+  box-shadow: 0 0 10px rgba(255, 203, 226, 0.9);
   cursor: pointer;
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease;
 }
 
 input[type=range].custom-slider:hover::-moz-range-thumb {
-  transform: scale(1.5);
+  transform: scale(1.6);
   background: #ffffff;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 1);
 }
 
 input:focus { outline: none; }
