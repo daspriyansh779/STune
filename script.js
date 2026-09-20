@@ -38,19 +38,15 @@ function submitUnlock() {
   const lockIcon = document.getElementById('lock-icon');
   
   if (enteredPin === CORRECT_PIN) {
-    // Success State
     feedback.innerText = "Access Granted! Welcome to your Sanctuary ✨";
     feedback.classList.remove('text-error');
     feedback.classList.add('text-primary');
     lockIcon.innerText = "lock_open";
     
-    // Smooth transition to main page after slight delay
     setTimeout(() => {
       transitionToSanctuary();
     }, 1200);
-    
   } else {
-    // Error State
     feedback.innerText = "Incorrect Keycode. Please try again.";
     feedback.classList.remove('text-primary');
     feedback.classList.add('text-error', 'animate-pulse');
@@ -77,29 +73,21 @@ function playAudioChime() {
   }, 3000);
 }
 
-// Single Page Application (SPA) Smooth Transition
 function transitionToSanctuary() {
   const loginView = document.getElementById('login-view');
   const mainView = document.getElementById('main-view');
 
-  // Fade out login screen
   loginView.classList.replace('opacity-100', 'opacity-0');
 
-  // Wait for fade out, then hide login and fade in main
   setTimeout(() => {
     loginView.classList.add('hidden');
-    
     mainView.classList.remove('hidden');
-    // Force a browser repaint so the fade-in animation triggers
     void mainView.offsetWidth; 
     mainView.classList.replace('opacity-0', 'opacity-100');
-
-    // Start Sakura animation only AFTER entering the main page
     startSakuraAnimation();
   }, 1000);
 }
 
-// Allow typing the PIN with the physical keyboard (only if login view is active)
 document.addEventListener('keydown', (e) => {
   const loginView = document.getElementById('login-view');
   if (loginView && !loginView.classList.contains('hidden')) {
@@ -112,7 +100,6 @@ document.addEventListener('keydown', (e) => {
     }
   }
 });
-
 
 // =========================================================================
 // 2. REAL HTML5 AUDIO ENGINE & TIMELINE CONTROLLER
@@ -129,9 +116,8 @@ let currentVaultCategory = "all";
 let currentBtsCategory = "all";
 let previousVolume = 1;
 
-
 // =========================================================================
-// 3. TRACK DATABASES (BLACKPINK, BTS, ENGLISH, BENGALI, HINDI)
+// 3. TRACK DATABASES (BLACKPINK, BTS, JAPANESE, ENGLISH, BENGALI, HINDI)
 // =========================================================================
 
 // --- BLACKPINK TRACKS ---
@@ -223,6 +209,41 @@ const btsTracks = [
   { id: 140, title: "Hate You", artist: "Jung Kook (BTS)", category: "all", album: "GOLDEN", duration: "2:34", file: "music/BLACKPINK/BTS/Jungkook Hate You Lyrics - Lemonade.mp3" },
   { id: 141, title: "The Astronaut", artist: "Jin (BTS)", category: "all", album: "Single", duration: "4:42", file: "music/BLACKPINK/BTS/진 (Jin) 'The Astronaut' Official MV - HYBE LABELS.mp3" }
 ];
+
+// --- JAPANESE TRACKS (NEW) ---
+const japaneseTracks = [
+  { id: 601, title: "Amu to Imu no Uta", artist: "gryanxyouth", album: "Nobita and the New Steel Troops", duration: "4:00", file: "music/japanese/『Amu to Imu no Uta _ アムとイムの歌』 Lyrics [Rom] Song from Doraemon Nobita and the New Steel Troops - gryanxyouth.mp3" },
+  { id: 602, title: "Anata no Koibito ni Naritai", artist: "ChoQMay", album: "Single", duration: "3:30", file: "music/japanese/『貴方の恋人になりたい』Music Video ／ チョーキューメイ - チョーキューメイ.mp3" },
+  { id: 603, title: "NIGHT DANCER", artist: "imase", album: "Single", duration: "3:15", file: "music/japanese/【imase】NIGHT DANCER（MV） - imase.mp3" },
+  { id: 604, title: "Touhikou", artist: "imase", album: "Single", duration: "3:20", file: "music/japanese/【imase】逃避行（MV） - imase.mp3" },
+  { id: 605, title: "Bling-Bang-Bang-Born", artist: "Creepy Nuts", album: "MASHLE", duration: "2:50", file: "music/japanese/Creepy Nuts｢Bling-Bang-Bang-Born｣ × TV Anime｢マッシュル-MASHLE-｣ Collaboration Music Video #BBBBダンス - Creepy Nuts.mp3" },
+  { id: 606, title: "Uchiage Hanabi", artist: "DAOKO x Kenshi Yonezu", album: "Single", duration: "4:49", file: "music/japanese/DAOKO × 米津玄師『打上花火』MUSIC VIDEO - daoko_jp.mp3" },
+  { id: 607, title: "Akeboshi", artist: "LiSA", album: "Demon Slayer", duration: "4:05", file: "music/japanese/Demon Slayer Mugen Train Opening (Full) -Akeboshi- Lyrics - ZEN.mp3" },
+  { id: 608, title: "Dragon Night", artist: "SEKAI NO OWARI", album: "Dragon Night", duration: "3:49", file: "music/japanese/Dragon Night - SEKAI NO OWARI.mp3" },
+  { id: 609, title: "Grand Escape", artist: "RADWIMPS", album: "Weathering With You", duration: "5:38", file: "music/japanese/Grand Escape  A Weathering With You AMV - Tranquility.mp3" },
+  { id: 610, title: "SPECIALZ", artist: "King Gnu", album: "Jujutsu Kaisen", duration: "3:58", file: "music/japanese/King Gnu - SPECIALZ - King Gnu official YouTube channel.mp3" },
+  { id: 611, title: "Gurenge", artist: "LiSA", album: "Demon Slayer", duration: "3:58", file: "music/japanese/LiSA - Gurenge (Demon Slayer Kimetsu no Yaiba OP) [Eng_Rom_漢字 Lyrics] - maxiebaku.mp3" },
+  { id: 612, title: "LOVE STORY", artist: "SeyonGod", album: "Genshin Impact", duration: "3:40", file: "music/japanese/LOVE STORY- Genshin Impact [AMV_GMV] - SeyonGod.mp3" },
+  { id: 613, title: "Stay With Me", artist: "Miki Matsubara", album: "Club Mix", duration: "5:12", file: "music/japanese/Miki Matsubara - Stay With Me HD (Club Mix) - KAMACHI PEACH.mp3" },
+  { id: 614, title: "Nandemonaiya", artist: "RADWIMPS", album: "Your Name.", duration: "5:44", file: "music/japanese/Nandemonaiya - movie ver. - Radwimps.mp3" },
+  { id: 615, title: "Propose", artist: "natori", album: "Single", duration: "3:10", file: "music/japanese/natori - Propose - なとり _ natori.mp3" },
+  { id: 616, title: "Shounen Ki", artist: "Tetsuya Takeda", album: "Heavens Beat", duration: "4:00", file: "music/japanese/Shounen Ki Lyrics [English & Japanese] - Tetsuya Takeda - Heavens Beat.mp3" },
+  { id: 617, title: "Suki Dakara", artist: "Yuika ft. Ren", album: "Single", duration: "3:30", file: "music/japanese/Suki Dakara_好きだから (Duet ver.) by Yuika ft. Ren 【Kan_Rom_Eng Lyrics】 - Takotenshii.mp3" },
+  { id: 618, title: "Suzume", artist: "RADWIMPS feat. Toaka", album: "Suzume", duration: "3:58", file: "music/japanese/Suzume (feat. Toaka) - Radwimps.mp3" },
+  { id: 619, title: "Bansanka", artist: "tuki.", album: "Single", duration: "3:45", file: "music/japanese/tuki.『晩餐歌』Official Music Video - tuki.(17).mp3" },
+  { id: 620, title: "Monster", artist: "YOASOBI", album: "Single", duration: "3:26", file: "music/japanese/YOASOBI「怪物」Official Music Video　(YOASOBI - Monster) - YOASOBI.mp3" },
+  { id: 621, title: "Blue Bird", artist: "Ikimonogakari", album: "Single", duration: "3:35", file: "music/japanese/いきものがかり 『ブルーバード』Music Video - いきものがかり.mp3" },
+  { id: 622, title: "Sparkle", artist: "RADWIMPS", album: "Your Name.", duration: "6:48", file: "music/japanese/スパークル [original ver.] -Your name. Music Video edition- 予告編 from new album「人間開花」初回盤DVD - RADWIMPS.mp3" },
+  { id: 623, title: "Nemuru Machi", artist: "WhaleDontSleep ft. yama", album: "Single", duration: "3:20", file: "music/japanese/ねむるまち (feat. yama) - WhaleDontSleep.mp3" },
+  { id: 624, title: "Akuma no Ko", artist: "Ai Higuchi", album: "Attack on Titan", duration: "3:50", file: "music/japanese/ヒグチアイ _ 悪魔の子 (アニメスペシャルVer.)  Ai Higuchi “Akuma no Ko” Anime Special Ver. - ヒグチアイ.mp3" },
+  { id: 625, title: "Hana ni Bourei", artist: "Yorushika", album: "Single", duration: "4:00", file: "music/japanese/ヨルシカ - 花に亡霊（OFFICIAL VIDEO） - ヨルシカ _ n-buna Official.mp3" },
+  { id: 626, title: "One Voice", artist: "Rokudenashi", album: "Single", duration: "3:45", file: "music/japanese/ロクデナシ「ただ声一つ」_ Rokudenashi - One Voice【Official Music Video】 - ロクデナシ.mp3" },
+  { id: 627, title: "Kaikai Kitan", artist: "Eve", album: "Jujutsu Kaisen", duration: "3:40", file: "music/japanese/廻廻奇譚 - Eve MV - Eve.mp3" },
+  { id: 628, title: "Baby you", artist: "Yuka", album: "Single", duration: "3:20", file: "music/japanese/有華「Baby you」Music Video(Yuka Ver.) - 有華 Official YouTube Channel.mp3" },
+  { id: 629, title: "Young Girl A", artist: "siinamota", album: "Single", duration: "3:30", file: "music/japanese/椎名もた(siinamota) - Young Girl A _ 少女A - U_M_A_A Inc..mp3" },
+  { id: 630, title: "Crying for Rain", artist: "Minami", album: "Domestic Girlfriend", duration: "4:15", file: "music/japanese/美波「カワキヲアメク」MV - 美波.mp3" }
+];
+
 
 // --- ENGLISH TRACKS ---
 const englishTracks = [
@@ -336,6 +357,7 @@ const hindiTracks = [
 const masterPlaylist = [
   ...blackpinkTracks,
   ...btsTracks,
+  ...japaneseTracks,
   ...englishTracks,
   ...bengaliTracks,
   ...bengaliSpecialTracks,
@@ -385,11 +407,15 @@ function updatePlaybackUI(playing) {
   const btsBigBtnIcon = document.querySelector('#bts-spotify-vault-modal button[title="Play All"] span');
   if (btsBigBtnIcon) btsBigBtnIcon.innerText = playing ? 'pause' : 'play_arrow';
   
+  const japaneseBigBtnIcon = document.querySelector('#japanese-spotify-vault-modal button[title="Play All"] span');
+  if (japaneseBigBtnIcon) japaneseBigBtnIcon.innerText = playing ? 'pause' : 'play_arrow';
+  
   const bengaliSpecialBigBtnIcon = document.querySelector('#bengali-special-vault-modal button[title="Play All"] span');
   if (bengaliSpecialBigBtnIcon) bengaliSpecialBigBtnIcon.innerText = playing ? 'pause' : 'play_arrow';
 
   renderSpotifyVaultTracks(getFilteredVaultList());
   renderBtsVaultTracks(getFilteredBtsVaultList());
+  renderJapaneseVaultTracks(getFilteredJapaneseVaultList());
   renderBengaliSpecialTracks();
 }
 
@@ -422,6 +448,7 @@ function playAudioTrack(title, artist, album, filePath = null, trackId = null) {
   } else {
     if (englishTracks.some(t => t.title.toLowerCase() === title.toLowerCase())) activePlaylist = englishTracks;
     else if (bengaliTracks.some(t => t.title.toLowerCase() === title.toLowerCase())) activePlaylist = bengaliTracks;
+    else if (japaneseTracks.some(t => t.title.toLowerCase() === title.toLowerCase())) activePlaylist = japaneseTracks;
     else if (hindiTracks.some(t => t.title.toLowerCase() === title.toLowerCase())) activePlaylist = hindiTracks;
     else if (bengaliSpecialTracks.some(t => t.title.toLowerCase() === title.toLowerCase())) activePlaylist = bengaliSpecialTracks;
     else activePlaylist = masterPlaylist;
@@ -535,7 +562,9 @@ audio.addEventListener('ended', () => { if (!isLooping) changeTrack(1); });
 
 audio.addEventListener('loadedmetadata', () => {
   const totalDurationEl = document.getElementById('total-duration');
-  if (totalDurationEl && audio.duration) totalDurationEl.innerText = formatTime(audio.duration);
+  if (totalDurationEl && audio.duration) {
+    totalDurationEl.innerText = formatTime(audio.duration);
+  }
 });
 
 audio.addEventListener('timeupdate', () => {
@@ -769,6 +798,61 @@ function filterBtsVaultTracks() { renderBtsVaultTracks(getFilteredBtsVaultList()
 function playBtsVaultTrackByIndex(index) { activePlaylist = getFilteredBtsVaultList(); if (activePlaylist[index]) playAudioTrack(activePlaylist[index].title, activePlaylist[index].artist, activePlaylist[index].album, activePlaylist[index].file, activePlaylist[index].id); }
 function shuffleAndPlayAllBTS() { activePlaylist = getFilteredBtsVaultList(); const randomTrack = activePlaylist[Math.floor(Math.random() * activePlaylist.length)]; playAudioTrack(randomTrack.title, randomTrack.artist, randomTrack.album, randomTrack.file, randomTrack.id); }
 
+// --- JAPANESE VAULT ---
+function getFilteredJapaneseVaultList() {
+  const searchInput = document.getElementById('japanese-vault-search-input');
+  const term = searchInput ? searchInput.value.toLowerCase().trim() : '';
+  let filtered = japaneseTracks;
+  if (term) filtered = filtered.filter(t => t.title.toLowerCase().includes(term) || t.artist.toLowerCase().includes(term) || t.album.toLowerCase().includes(term));
+  return filtered;
+}
+
+function renderJapaneseVaultTracks(tracksToRender) {
+  const container = document.getElementById('japanese-vault-tracks-container');
+  if (!container) return;
+  const counterEl = document.getElementById('japanese-vault-track-counter');
+  if (counterEl) counterEl.innerText = `${tracksToRender.length} songs`;
+
+  container.innerHTML = tracksToRender.map((track, idx) => {
+    const isThisTrack = track.id === activePlayingId;
+    const isPlayingCurrent = isThisTrack && !audio.paused;
+    const serialNumber = String(idx + 1).padStart(2, '0');
+    let badgeColor = "bg-rose-500/20 text-rose-300 font-medium border border-rose-500/30";
+
+    return `
+      <div class="spotify-track-row ${isThisTrack ? 'bg-rose-900/40 border-l-2 border-rose-400' : ''} grid grid-cols-12 gap-2 items-center px-4 py-2.5 rounded-DEFAULT cursor-pointer group" onclick="handleUniversalTrackClick(${track.id}, getFilteredJapaneseVaultList())">
+        <div class="col-span-1 text-center font-body-sm text-sm text-on-surface-variant flex items-center justify-center">
+          <span class="${isPlayingCurrent ? 'text-rose-400 font-bold hidden group-hover:hidden' : (isThisTrack ? 'text-rose-400 font-bold' : '')} group-hover:hidden">${serialNumber}</span>
+          <span class="material-symbols-outlined text-[20px] text-rose-400 ${isPlayingCurrent ? 'block' : 'hidden group-hover:block'}">${isPlayingCurrent ? 'pause' : 'play_arrow'}</span>
+        </div>
+        <div class="col-span-6 md:col-span-5 flex items-center gap-3 min-w-0">
+          <div class="min-w-0">
+            <p class="font-title-md text-sm truncate ${isThisTrack ? 'text-rose-300 font-bold' : 'text-on-surface'}">${track.title}</p>
+            <span class="inline-block md:hidden px-2 py-0.2 rounded-full ${badgeColor} text-[10px] font-medium">${track.artist}</span>
+          </div>
+        </div>
+        <div class="hidden md:block col-span-3 font-body-sm text-xs text-on-surface-variant truncate">${track.album}</div>
+        <div class="hidden sm:block col-span-3 md:col-span-2 text-right"><span class="px-2.5 py-0.5 rounded-full ${badgeColor} text-[11px]">${track.artist}</span></div>
+        <div class="col-span-5 sm:col-span-2 md:col-span-1 flex items-center justify-end gap-2 text-xs text-on-surface-variant">
+          <span>${track.duration}</span>
+          <button class="text-on-surface-variant hover:text-rose-400 transition-colors opacity-0 group-hover:opacity-100" onclick="event.stopPropagation(); toggleFav(this)"><span class="material-symbols-outlined text-[16px]">favorite_border</span></button>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function openJapaneseVault() {
+  const modal = document.getElementById('japanese-spotify-vault-modal');
+  if (modal) { modal.classList.remove('hidden'); modal.classList.add('flex'); document.body.style.overflow = 'hidden'; }
+  renderJapaneseVaultTracks(getFilteredJapaneseVaultList());
+}
+function closeJapaneseVault() { const modal = document.getElementById('japanese-spotify-vault-modal'); if (modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.style.overflow = 'auto'; } }
+function filterJapaneseVaultTracks() { renderJapaneseVaultTracks(getFilteredJapaneseVaultList()); }
+function playJapaneseVaultTrackByIndex(index) { activePlaylist = getFilteredJapaneseVaultList(); if (activePlaylist[index]) playAudioTrack(activePlaylist[index].title, activePlaylist[index].artist, activePlaylist[index].album, activePlaylist[index].file, activePlaylist[index].id); }
+function shuffleAndPlayAllJapanese() { activePlaylist = getFilteredJapaneseVaultList(); const randomTrack = activePlaylist[Math.floor(Math.random() * activePlaylist.length)]; playAudioTrack(randomTrack.title, randomTrack.artist, randomTrack.album, randomTrack.file, randomTrack.id); }
+
+
 // --- BENGALI SPECIAL VAULT ---
 function renderBengaliSpecialTracks() {
   const container = document.getElementById('bengali-special-tracks-container');
@@ -856,6 +940,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeSpotifyVault();
     closeBtsVault();
+    closeJapaneseVault();
     closeBengaliSpecialVault();
     closeLetterModal();
   }
@@ -898,51 +983,7 @@ function triggerSearch(term) {
 document.addEventListener('DOMContentLoaded', () => {
   renderSpotifyVaultTracks(blackpinkTracks);
   renderBtsVaultTracks(btsTracks);
-  renderBengaliSpecialTracks();
-
-  const sanctuarySearch = document.getElementById('sanctuary-search');
-  if (sanctuarySearch) {
-    sanctuarySearch.addEventListener('input', (e) => window.handleMainSearch(e.target.value));
-  }
-});
-
-
-/// =========================================================================
-// 8. GLOBAL SEARCH & INITIALIZATION
-// =========================================================================
-window.handleMainSearch = function(query) {
-  const term = query.toLowerCase().trim();
-  const trackCards = document.querySelectorAll('[onclick*="playAudioTrack"]');
-
-  trackCards.forEach(card => {
-    const text = card.textContent.toLowerCase();
-    if (text.includes(term) || term === '') {
-      card.style.opacity = '1';
-      card.style.filter = 'none';
-      card.style.display = 'flex'; 
-    } else {
-      card.style.opacity = '0';
-      card.style.display = 'none'; 
-    }
-  });
-};
-
-function triggerSearch(term) {
-  const searchInput = document.getElementById('sanctuary-search');
-  if (searchInput) {
-    searchInput.value = term;
-    window.handleMainSearch(term);
-    
-    const blackpinkSection = document.getElementById('section-blackpink');
-    if (blackpinkSection) {
-      blackpinkSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  renderSpotifyVaultTracks(blackpinkTracks);
-  renderBtsVaultTracks(btsTracks);
+  renderJapaneseVaultTracks(japaneseTracks);
   renderBengaliSpecialTracks();
 
   const sanctuarySearch = document.getElementById('sanctuary-search');
@@ -950,7 +991,6 @@ document.addEventListener('DOMContentLoaded', () => {
     sanctuarySearch.addEventListener('input', (e) => window.handleMainSearch(e.target.value));
   }
   
-  // Start login screen particles immediately
   generateLoginParticles();
 });
 
@@ -958,71 +998,53 @@ document.addEventListener('DOMContentLoaded', () => {
 // 9. MAGICAL BACKGROUND ANIMATIONS (LOGIN & MAIN)
 // =========================================================================
 
-// Generates 60 random stars & glowing orbs across the entire login screen
 function generateLoginParticles() {
   const container = document.getElementById('particles-container');
   if (!container) return;
-  
-  // Clear any hardcoded HTML particles
   container.innerHTML = '';
-  
   const symbols = ['✦', '✧', '✨', '★', '⋆'];
-  const totalParticles = 60; // Fills the whole screen
+  const totalParticles = 60; 
   
   for (let i = 0; i < totalParticles; i++) {
     const p = document.createElement('div');
-    
-    // 70% chance to be a Star symbol, 30% chance to be a glowing round orb
     if (Math.random() > 0.3) {
       p.innerText = symbols[Math.floor(Math.random() * symbols.length)];
       p.className = 'absolute pointer-events-none login-particle';
-      p.style.fontSize = `${Math.random() * 18 + 10}px`; // Random size 10-28px
+      p.style.fontSize = `${Math.random() * 18 + 10}px`; 
     } else {
       p.className = 'absolute rounded-full pointer-events-none login-glow-orb';
-      const size = Math.random() * 6 + 2; // Random size 2-8px
+      const size = Math.random() * 6 + 2; 
       p.style.width = `${size}px`;
       p.style.height = `${size}px`;
-      // Mix of soft pink and soft purple glows
       p.style.color = (Math.random() > 0.5) ? '#ffcbe2' : '#d9b9ff';
       p.style.backgroundColor = 'currentColor';
     }
-
-    // Place randomly anywhere on the screen (0% to 100%)
     p.style.left = `${Math.random() * 100}%`;
     p.style.top = `${Math.random() * 100}%`;
-    
-    // Randomize animation speed and delay so they don't blink in unison
-    const duration = Math.random() * 4 + 3; // 3 to 7 seconds
+    const duration = Math.random() * 4 + 3; 
     p.style.animationDuration = `${duration}s`;
     p.style.animationDelay = `${Math.random() * 5}s`;
-    
     container.appendChild(p);
   }
 }
 
-// Generates falling Sakura petals on the main sanctuary page
 function startSakuraAnimation() {
   const createPetal = () => {
     const mainView = document.getElementById('main-view');
-    // Only spawn petals if the main view is actually visible
     if (!mainView || mainView.classList.contains('hidden')) return;
 
     const petal = document.createElement('div');
     petal.classList.add('sakura-petal');
-    
-    const size = Math.random() * 10 + 8; // 8px to 18px
+    const size = Math.random() * 10 + 8; 
     petal.style.width = `${size}px`;
     petal.style.height = `${size}px`;
     petal.style.left = `${Math.random() * 100}vw`;
     
-    const fallDuration = Math.random() * 5 + 8; // 8s to 13s fall
-    const swayDuration = Math.random() * 2 + 2; // 2s to 4s sway
+    const fallDuration = Math.random() * 5 + 8; 
+    const swayDuration = Math.random() * 2 + 2; 
     petal.style.animationDuration = `${fallDuration}s, ${swayDuration}s`;
-    
     document.body.appendChild(petal);
-    
     setTimeout(() => { petal.remove(); }, fallDuration * 1000);
   };
-
   setInterval(createPetal, 400);
 }
