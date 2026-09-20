@@ -108,14 +108,6 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
   
-  <style>
-    /* Custom Scrollbar for Playlist Sections */
-    .playlist-scroll::-webkit-scrollbar { width: 6px; }
-    .playlist-scroll::-webkit-scrollbar-track { background: rgba(38, 27, 46, 0.4); border-radius: 8px; }
-    .playlist-scroll::-webkit-scrollbar-thumb { background: rgba(255, 203, 226, 0.3); border-radius: 8px; }
-    .playlist-scroll::-webkit-scrollbar-thumb:hover { background: rgba(255, 203, 226, 0.6); }
-    .playlist-scroll { scrollbar-width: thin; scrollbar-color: rgba(255, 203, 226, 0.3) rgba(38, 27, 46, 0.4); }
-  </style>
 </head>
 
 <body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary min-h-screen relative overflow-x-hidden">
@@ -141,20 +133,12 @@
             <div class="w-[320px] h-[320px] translate-y-36 -translate-x-28 rounded-full bg-tertiary-fixed/10 blur-[80px]"></div>
           </div>
           
-          <div class="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden" id="particles-container">
-            <div class="absolute top-[6%] left-[8%] text-primary/40 text-title-lg animate-bounce" style="animation-duration: 4s;">✦</div>
-            <div class="absolute top-[18%] right-[10%] text-tertiary/60 text-headline-md animate-pulse" style="animation-duration: 3s;">✧</div>
-            <div class="absolute top-[52%] left-[4%] text-primary-fixed-dim/30 text-title-md animate-ping" style="animation-duration: 5s;">🌸</div>
-            <div class="absolute bottom-[20%] left-[10%] text-secondary/40 text-title-lg">♥</div>
-            <div class="absolute top-[12%] left-[48%] text-tertiary/40 text-body-md animate-bounce" style="animation-duration: 6s;">★</div>
-            <div class="absolute bottom-[14%] right-[8%] text-primary/50 text-title-md animate-pulse" style="animation-duration: 4.5s;">♡</div>
-            <div class="absolute top-[65%] right-[18%] text-primary-container/40 text-headline-md">✧</div>
-            <div class="absolute top-[32%] right-[4%] text-secondary-fixed/40 text-body-md animate-bounce" style="animation-duration: 7s;">✨</div>
-          </div>
+          <!-- Full screen Magic Particles will be generated here by JS -->
+          <div class="absolute inset-0 pointer-events-none select-none z-[5] overflow-hidden" id="particles-container"></div>
           
           <div class="relative z-20 w-full max-w-5xl flex justify-between items-end px-space-xl -mb-4 pointer-events-none">
             <div class="pointer-events-auto flex flex-col items-center group cursor-pointer transition-transform duration-300 hover:-translate-y-2">
-              <div class="bg-surface-container-high/90 backdrop-blur-md px-space-md py-1 rounded-full shadow-lg text-primary text-label-sm font-label-sm mb-1 animate-bounce" style="animation-duration: 3s;">psst... besties only! 💕</div>
+              <div class="bg-surface-container-high/90 backdrop-blur-md px-space-md py-1 rounded-full shadow-lg text-primary text-label-sm font-label-sm mb-1 animate-bounce" style="animation-duration: 3s;">Melodies for Beauty...💕</div>
               <div class="w-32 h-24 relative cat-purr">
                 <svg class="w-full h-full overflow-visible drop-shadow-[0_4px_12px_rgba(244,166,205,0.25)]" viewBox="0 0 140 110">
                   <polygon fill="#eedcff" points="28,45 12,12 50,28"></polygon>
@@ -235,7 +219,7 @@
                   <div class="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-gradient-to-br from-primary-container to-secondary-container flex items-center justify-center shadow-md">
                     <span class="font-quote-italic text-on-primary-container font-bold text-base">🌸</span>
                   </div>
-                  <p class="font-quote-italic text-quote-italic text-on-surface leading-relaxed text-[17px]">Thank you for being the quiet comfort in noisy days, the truest listener, and the brightest spark of genuine laughter. No playlist in the world could hold every reason I am grateful for our friendship, but this sanctuary holds the melodies that belong only to us.</p>
+                  <p class="font-quote-italic text-quote-italic text-on-surface leading-relaxed text-[17px]">Thank you for being the strength in my difficult days, the listener behind my endless talks, and the reason behind so many of my happiest memories. No playlist could ever hold everything our friendship means to me, but these songs carry little pieces of the moments, laughter, and memories that will always belong to us. ❤️</p>
                   <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Every melody, lyric, and corner here has been crafted with utmost love and reverence for you. Take a deep breath, leave the world's weight at the threshold, and listen to what your presence brings to life.</p>
                   <div class="pt-space-xs flex items-center justify-between">
                     <div class="flex items-center gap-2">
@@ -249,7 +233,7 @@
                   </div>
                 </div>
                 <div class="flex flex-wrap items-center gap-space-xs pt-1">
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/50 text-secondary text-label-sm font-label-sm"><span class="material-symbols-outlined text-[14px]">headphones</span>Warm Vinyl Ambience</span>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/50 text-secondary text-label-sm font-label-sm"><span class="material-symbols-outlined text-[14px]">headphones</span>Warm Ambience</span>
                   <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/50 text-primary text-label-sm font-label-sm"><span class="material-symbols-outlined text-[14px]">nest_clock_farsight_analog</span>Midnight Tea &amp; Memories</span>
                   <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/50 text-tertiary text-label-sm font-label-sm"><span class="material-symbols-outlined text-[14px]">pets</span>Cat Cuddles Guaranteed</span>
                 </div>
@@ -266,7 +250,7 @@
                   
                   <div class="space-y-1">
                     <h2 class="font-headline-md text-headline-md text-on-surface">Shrabani’s Keycode 🔐</h2>
-                    <p class="font-body-sm text-body-sm text-on-surface-variant max-w-[240px] mx-auto">Enter our special date (DD / MM / YYYY)</p>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant max-w-[240px] mx-auto">Enter that one date (DD / MM / YYYY)</p>
                   </div>
                   
                   <!-- Blank PIN Dots (JS will fill these) -->
@@ -378,7 +362,7 @@
 
             <div class="flex items-center gap-space-md bg-surface-container/70 backdrop-blur-xl p-space-md rounded-lg shadow-xl">
               <div class="relative w-16 h-16 rounded-full overflow-hidden shadow-md flex-shrink-0">
-                <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGpbNaIJSvGp8XwCNcL9h2HOA7OtV2jRIcAkT6d8-xogyvYwsOjf28LH4QPhkGZOAwHp86I6qaQkm7pCjjbna6_BFdcEhJ_0w11x79hhxl-jfIPZFvN5dHtHTqd_tps1POzh95AuGr00m6kLcQSLnQ5s4aV9hlhnXgxKgzzQAFvZk-225grhdZsb0TM25wGGY-1N6FT_r9nL_qM7Nz4_0tytuOGcgDPqNViSIkOJeo1UwPaB8tlANv-A" alt="Blossom portrait">
+                <img class="w-full h-full object-cover" src="image/SANTURY/sra BDAY 7.png" alt="Blossom portrait">
               </div>
               <div class="space-y-1">
                 <span class="font-label-sm text-label-sm text-tertiary uppercase">Sanctuary Vibe</span>
@@ -410,6 +394,7 @@
               <button class="px-3 py-1 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary text-xs font-medium transition-colors border border-surface-variant" onclick="triggerSearch('Bengali')">Bengali</button>
               <button class="px-3 py-1 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary text-xs font-medium transition-colors border border-surface-variant" onclick="triggerSearch('BLACKPINK')">BLACKPINK</button>
               <button class="px-3 py-1 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary text-xs font-medium transition-colors border border-surface-variant" onclick="triggerSearch('Acoustic')">Acoustic</button>
+              <button class="px-3 py-1 rounded-full bg-surface-container hover:bg-primary hover:text-on-primary text-xs font-medium transition-colors border border-surface-variant" onclick="triggerSearch('Anime')">Anime</button>
             </div>
           </div>
         </section>
@@ -418,6 +403,8 @@
         <div class="mt-space-lg flex items-center gap-space-sm overflow-x-auto pb-2 scrollbar-none">
           <a class="px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap shadow-md hover:shadow-lg transition-all" href="#section-blackpink">✨ BLACKPINK (41 Songs)</a>
           <a class="px-space-md py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md whitespace-nowrap hover:shadow-lg transition-all" href="#section-bts">💜 BTS ARMY (41 Songs)</a>
+          <!-- NEW JAPANESE FILTER BUTTON -->
+          <a class="px-space-md py-1.5 rounded-full bg-rose-500/20 text-rose-200 border border-rose-500/30 font-label-md text-label-md whitespace-nowrap hover:shadow-lg hover:bg-rose-500/40 transition-all" href="#section-japanese">🌸 J-Pop & Anime (30 Songs)</a>
           <a class="px-space-md py-1.5 rounded-full bg-surface-container-high text-tertiary font-label-md text-label-md whitespace-nowrap hover:bg-tertiary hover:text-on-tertiary transition-all" href="#section-english">🌙 English Hits</a>
           <a class="px-space-md py-1.5 rounded-full bg-surface-container-high text-primary-fixed font-label-md text-label-md whitespace-nowrap hover:bg-primary-fixed hover:text-on-primary-fixed transition-all" href="#section-bengali">🍃 Sweet Bengali</a>
           <a class="px-space-md py-1.5 rounded-full bg-surface-container-high text-tertiary-fixed font-label-md text-label-md whitespace-nowrap hover:bg-tertiary-fixed hover:text-on-tertiary-fixed transition-all" href="#section-hindi">🪔 Soulful Hindi</a>
@@ -438,13 +425,14 @@
             <p class="font-quote-italic text-quote-italic text-primary italic">Complete 41-Song Discography &amp; Solo Vault 🎀</p>
           </div>
 
+          <!-- BLACKPINK FOLDER CARD -->
           <div class="p-space-lg md:p-space-xl rounded-xl bg-gradient-to-r from-surface-container-high via-surface-container-low to-surface-container-lowest border border-primary/20 shadow-2xl relative overflow-hidden group">
             <div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary/15 blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-700"></div>
             
             <div class="flex flex-col lg:flex-row items-center justify-between gap-space-lg relative z-10">
               <div class="flex flex-col sm:flex-row items-center gap-space-md text-center sm:text-left">
                 <div class="relative w-36 h-36 rounded-2xl overflow-hidden shadow-2xl flex-shrink-0 cursor-pointer group-hover:scale-105 transition-transform" onclick="openSpotifyVault('all')">
-                  <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClNYIwPbZtvR2Ber2QjdNPqNLFHN6Fknjg7GxveJdLRTgVBC4UPVJemt5iFcvrZh09_cNlJZZETzUb6RVQ3ZJH1MjNAx9-Jqn88Im6iWosKxUdlWXFWT0-U0ErwX2WOFgn3OCgVghYBiCltfl7FsGbXw2TnklNHTnueVho1mwhhHNZ6pE3ZD_xgF0Put_HSn_USkGEk-H5cFLoiIjrJCtTufpCGcfIbf52kXe5Gj7wviHDtSu2nb8EEA" alt="BLACKPINK Vault">
+                 <img class="w-full h-full object-cover" src="image/BLACKPINK/1900x1900-000000-80-0-0.jpg" alt="BLACKPINK Vault">
                   <div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <span class="material-symbols-outlined text-[42px] text-on-primary">folder_open</span>
                   </div>
@@ -453,7 +441,7 @@
 
                 <div class="space-y-1.5">
                   <div class="flex items-center justify-center sm:justify-start gap-2">
-                    <span class="px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary-container text-[11px] font-semibold tracking-wider uppercase">Spotify Album View</span>
+                    <span class="px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary-container text-[11px] font-semibold tracking-wider uppercase">Album View</span>
                     <span class="text-tertiary text-xs">• 41 Master Tracks</span>
                   </div>
                   <h3 class="font-headline-md text-headline-md text-primary font-bold">BLACKPINK: The Eternal Vault</h3>
@@ -466,7 +454,7 @@
               <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
                 <button onclick="openSpotifyVault('all')" class="w-full sm:w-auto px-space-lg py-3 rounded-full bg-primary text-on-primary font-title-md text-title-md font-semibold flex items-center justify-center gap-2 shadow-xl hover:scale-105 transition-all">
                   <span class="material-symbols-outlined text-[22px]">format_list_numbered</span>
-                  <span>Open 41-Song Spotify Vault</span>
+                  <span>Open 41-Song Queens Vault</span>
                 </button>
                 <button onclick="shuffleAndPlayAllBP()" class="w-full sm:w-auto px-space-md py-3 rounded-full bg-surface-container-highest/80 text-primary font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-surface-container-highest transition-all">
                   <span class="material-symbols-outlined text-[20px]">shuffle</span>
@@ -507,7 +495,7 @@
             <div class="flex flex-col lg:flex-row items-center justify-between gap-space-lg relative z-10">
               <div class="flex flex-col sm:flex-row items-center gap-space-md text-center sm:text-left">
                 <div class="relative w-36 h-36 rounded-2xl overflow-hidden shadow-2xl flex-shrink-0 cursor-pointer group-hover:scale-105 transition-transform" onclick="openBtsVault('all')">
-                  <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGj9no6C08pjKKoCgAckTX47e4OfhF7z_h92htqXpYJhhO0OjqB48V9Y7eW5dH9IntAUmCPs5kBscbBVJcihTtcvCSVN3GcNtcBNIaA43V-zA8x5BiCcUug8-4NSRpcoivBJI7pRVoAFu5H_wzymkewMEmuHcX5FZTn01EHZmkadBaRMaeJOjjgqIdUbeYkSCMrDMkauNH09guMN68eDXDVYWrNFt77ctZIqudxIPAW1k1jct6LapylA" alt="BTS Vault">
+                 <img class="w-full h-full object-cover" src="image/BTS/unnamed.png" alt="BTS Vault">
                   <div class="absolute inset-0 bg-secondary/20 backdrop-blur-[2px] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <span class="material-symbols-outlined text-[42px] text-on-secondary">folder_open</span>
                   </div>
@@ -516,7 +504,7 @@
 
                 <div class="space-y-1.5">
                   <div class="flex items-center justify-center sm:justify-start gap-2">
-                    <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-semibold tracking-wider uppercase">Spotify Album View</span>
+                    <span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-semibold tracking-wider uppercase">Album View</span>
                     <span class="text-tertiary text-xs">• 41 Master Tracks</span>
                   </div>
                   <h3 class="font-headline-md text-headline-md text-secondary font-bold">BTS: Bangtan Galaxy Vault</h3>
@@ -542,6 +530,65 @@
               <span class="text-xs text-on-surface-variant mr-1">Quick unit jump:</span>
               <button onclick="openBtsVault('all')" class="px-3 py-1 rounded-full bg-surface-container text-xs text-on-surface hover:bg-secondary hover:text-on-secondary transition-all">All (41)</button>
               <button onclick="openBtsVault('v')" class="px-3.5 py-1 rounded-full bg-secondary/20 text-xs text-secondary font-semibold hover:bg-secondary hover:text-on-secondary transition-all">💜 Vitamin V</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =========================================================================
+             SECTION 2.5: JAPANESE VAULT (NEW)
+        ========================================================================== -->
+        <section class="mt-space-xl relative" id="section-japanese">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-md gap-2">
+            <div>
+              <div class="flex items-center gap-2 text-rose-300 font-label-sm text-label-sm uppercase tracking-wider">
+                <span class="material-symbols-outlined text-[16px]">travel_explore</span>
+                <span>The Sakura Gateway 🌸</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-semibold">J-Pop & Anime Sanctuary</h2>
+            </div>
+            <p class="font-quote-italic text-quote-italic text-rose-300 italic">"Melodies from another world, animated with love."</p>
+          </div>
+
+          <!-- JAPANESE FOLDER CARD -->
+          <div class="p-space-lg md:p-space-xl rounded-xl bg-gradient-to-r from-rose-900/30 via-surface-container-low to-surface-container-lowest border border-rose-500/30 shadow-2xl relative overflow-hidden group">
+            <div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-rose-500/15 blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-700"></div>
+            
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-space-lg relative z-10">
+              <div class="flex flex-col sm:flex-row items-center gap-space-md text-center sm:text-left">
+                <div class="relative w-36 h-36 rounded-2xl overflow-hidden shadow-2xl flex-shrink-0 cursor-pointer group-hover:scale-105 transition-transform" onclick="openJapaneseVault('all')">
+                   <img class="w-full h-full object-cover" src="image/JAPANESE/376138.png" alt="J-Pop & Anime Vault">
+                  <!-- Anime/J-Pop Aesthetic Placeholder -->
+                  <div class="w-full h-full bg-gradient-to-br from-rose-700 to-rose-900 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[64px] text-rose-200">landscape</span>
+                  </div>
+                  <div class="absolute inset-0 bg-rose-900/40 backdrop-blur-[2px] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span class="material-symbols-outlined text-[42px] text-rose-200">folder_open</span>
+                  </div>
+                  <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-black/70 text-rose-300 text-[10px] font-bold">30 Tracks</span>
+                </div>
+
+                <div class="space-y-1.5">
+                  <div class="flex items-center justify-center sm:justify-start gap-2">
+                    <span class="px-2.5 py-0.5 rounded-full bg-rose-500/20 text-rose-200 text-[11px] font-semibold tracking-wider uppercase border border-rose-500/30">Album View</span>
+                    <span class="text-tertiary text-xs">• 30 Master Tracks</span>
+                  </div>
+                  <h3 class="font-headline-md text-headline-md text-rose-300 font-bold">J-Pop & Anime Vault</h3>
+                  <p class="font-body-md text-on-surface-variant max-w-xl">
+                    From late-night Anime openings to Makoto Shinkai masterpiece soundtracks. A beautiful journey to Japan.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+                <button onclick="openJapaneseVault('all')" class="w-full sm:w-auto px-space-lg py-3 rounded-full bg-rose-800 text-rose-100 font-title-md text-title-md font-semibold flex items-center justify-center gap-2 shadow-xl hover:scale-105 transition-all">
+                  <span class="material-symbols-outlined text-[22px]">format_list_numbered</span>
+                  <span>Open 30-Song Anime Vault</span>
+                </button>
+                <button onclick="shuffleAndPlayAllJapanese()" class="w-full sm:w-auto px-space-md py-3 rounded-full bg-surface-container-highest/80 text-rose-300 font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-surface-container-highest transition-all border border-rose-500/30">
+                  <span class="material-symbols-outlined text-[20px]">shuffle</span>
+                  <span>Shuffle Vault</span>
+                </button>
+              </div>
             </div>
           </div>
         </section>
@@ -632,7 +679,7 @@
                   </div>
                 </div>
 
-              <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="handleUniversalTrackClick(205, englishTracks)">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="handleUniversalTrackClick(205, englishTracks)">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">05</div>
                     <div class="min-w-0">
@@ -908,6 +955,7 @@
                   </div>
                   <h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Bengali &amp; Sweetness</h3>
                 </div>
+                <!-- Play & Shuffle Buttons -->
                 <div class="flex items-center gap-2">
                   <button class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow hover:scale-105 transition-transform" onclick="playSection('bengali')" title="Play Bengali Tracks">
                     <span class="material-symbols-outlined text-[20px]">play_arrow</span>
@@ -918,6 +966,7 @@
                 </div>
               </div>
 
+              <!-- SPECIAL FOLDER CARD -->
               <div class="mb-space-md p-space-md rounded-lg bg-gradient-to-r from-primary/20 to-transparent border border-primary/20 cursor-pointer group hover:bg-primary/30 transition-all flex items-center justify-between" onclick="openBengaliSpecialVault()">
                  <div class="flex items-center gap-3">
                     <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-md">
@@ -931,6 +980,7 @@
                  <span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </div>
 
+              <!-- Scrollable List of 30 Bengali Songs -->
               <div class="space-y-space-sm max-h-[350px] overflow-y-auto pr-2 playlist-scroll">
                 
                 <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Aalote Chol', 'Srikanto', 'Single')">
@@ -2002,7 +2052,6 @@
         </section>
 
         <!-- SECTION 6: FOR YOU -->
-       <!-- SECTION 6: FOR YOU -->
         <section class="mt-space-xl p-space-lg md:p-space-xl rounded-xl bg-surface-container-low shadow-2xl relative overflow-hidden" id="section-for-you">
           <div class="absolute top-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
           
@@ -2015,7 +2064,7 @@
               Songs That Echo Our Friendship ✨
             </h2>
             <p class="font-quote-italic text-quote-italic text-on-surface-variant italic max-w-3xl">
-              "Every shared inside joke, every midnight phone call when we were stressing out, and every moment of laughter is sealed inside these tracks."
+              "Every inside joke, every late-night call through the stressful days, and every laugh we shared—these tracks hold a little piece of all those moments we never want to forget."
             </p>
           </div>
 
@@ -2119,7 +2168,7 @@
               
               <h3 class="font-headline-lg text-2xl text-on-surface font-semibold mb-2 mt-4">To My Dearest Friend...</h3>
               <p class="font-body-md text-on-surface-variant max-w-md mx-auto">
-                Tap here to open a special note sealed with love. Something to remind you of how cherished you are. ✨
+                Tap here to open a little note, written with love, just for you. A small reminder of how much you mean to me. ✨
               </p>
               
               <div class="mt-space-lg inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-on-primary font-label-sm shadow-md group-hover:shadow-lg transition-all">
@@ -2155,7 +2204,7 @@
     <div class="max-w-[1200px] w-full mx-auto px-gutter md:px-margin py-space-lg pb-32">
       <div class="flex flex-col md:flex-row items-center md:items-end gap-space-lg p-space-lg rounded-2xl bg-gradient-to-b from-primary-container/20 to-transparent">
         <div class="w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-2xl flex-shrink-0 border border-primary/20">
-          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClNYIwPbZtvR2Ber2QjdNPqNLFHN6Fknjg7GxveJdLRTgVBC4UPVJemt5iFcvrZh09_cNlJZZETzUb6RVQ3ZJH1MjNAx9-Jqn88Im6iWosKxUdlWXFWT0-U0ErwX2WOFgn3OCgVghYBiCltfl7FsGbXw2TnklNHTnueVho1mwhhHNZ6pE3ZD_xgF0Put_HSn_USkGEk-H5cFLoiIjrJCtTufpCGcfIbf52kXe5Gj7wviHDtSu2nb8EEA" alt="Spotify Vault Cover">
+         <img class="w-full h-full object-cover" src="image/BLACKPINK/1900x1900-000000-80-0-0.jpg" alt="BLACKPINK Vault">
         </div>
         <div class="space-y-2 text-center md:text-left">
           <span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-semibold">Verified Playlist • For Shrabani</span>
@@ -2229,7 +2278,7 @@
     <div class="max-w-[1200px] w-full mx-auto px-gutter md:px-margin py-space-lg pb-32">
       <div class="flex flex-col md:flex-row items-center md:items-end gap-space-lg p-space-lg rounded-2xl bg-gradient-to-b from-secondary-container/30 to-transparent">
         <div class="w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-2xl flex-shrink-0 border border-secondary/30">
-          <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGj9no6C08pjKKoCgAckTX47e4OfhF7z_h92htqXpYJhhO0OjqB48V9Y7eW5dH9IntAUmCPs5kBscbBVJcihTtcvCSVN3GcNtcBNIaA43V-zA8x5BiCcUug8-4NSRpcoivBJI7pRVoAFu5H_wzymkewMEmuHcX5FZTn01EHZmkadBaRMaeJOjjgqIdUbeYkSCMrDMkauNH09guMN68eDXDVYWrNFt77ctZIqudxIPAW1k1jct6LapylA" alt="BTS Vault Cover">
+         <img class="w-full h-full object-cover" src="image/BTS/unnamed.png" alt="BTS Vault">
         </div>
         <div class="space-y-2 text-center md:text-left">
           <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Verified Playlist • For Shrabani</span>
@@ -2275,6 +2324,72 @@
       </div>
 
       <div id="bts-vault-tracks-container" class="space-y-1 mt-2"></div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       SPOTIFY MODAL 2.5: JAPANESE VAULT (30 SONGS)
+  ========================================================================== -->
+  <div id="japanese-spotify-vault-modal" class="fixed inset-0 z-50 hidden flex-col bg-background/95 backdrop-blur-2xl overflow-y-auto transition-all duration-300">
+    <div class="sticky top-0 z-50 flex items-center justify-between px-gutter md:px-margin py-4 bg-surface/80 backdrop-blur-xl border-b border-surface-variant/40">
+      <div class="flex items-center gap-3">
+        <button onclick="closeJapaneseVault()" class="w-10 h-10 rounded-full bg-surface-container-high hover:bg-rose-600 hover:text-white text-on-surface flex items-center justify-center transition-all shadow-md">
+          <span class="material-symbols-outlined text-[22px]">arrow_back</span>
+        </button>
+        <span class="font-title-md text-title-md text-on-surface font-semibold">J-Pop & Anime Complete Vault</span>
+      </div>
+
+      <div class="relative w-64 md:w-80 hidden md:block">
+        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-tertiary-fixed-dim text-[18px]">search</span>
+        <input id="japanese-vault-search-input" oninput="filterJapaneseVaultTracks(this.value)" class="w-full pl-9 pr-4 py-1.5 rounded-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/60 font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-all" placeholder="Search 30 Anime songs..." type="text">
+      </div>
+    </div>
+
+    <div class="max-w-[1200px] w-full mx-auto px-gutter md:px-margin py-space-lg pb-32">
+      <div class="flex flex-col md:flex-row items-center md:items-end gap-space-lg p-space-lg rounded-2xl bg-gradient-to-b from-rose-900/30 to-transparent">
+        <div class="w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-2xl flex-shrink-0 border border-rose-500/30 bg-gradient-to-br from-rose-700 to-rose-900 flex items-center justify-center relative">
+          <div class="absolute inset-0 bg-black/20 backdrop-blur-sm">
+            <img class="w-full h-full object-cover" src="image/JAPANESE/376138.png" alt="J-Pop & Anime Vault Vault">
+          </div>
+          
+        </div>
+        <div class="space-y-2 text-center md:text-left">
+          <span class="font-label-sm text-label-sm text-rose-300 uppercase tracking-widest font-semibold">Verified Playlist • For Shrabani</span>
+          <h1 class="font-display-lg text-headline-lg md:text-display-lg text-rose-400 font-bold">J-Pop & Anime Sanctuary</h1>
+          <p class="font-quote-italic text-on-surface-variant italic">"All 30 breathtaking Japanese tracks packed into one glowing folder."</p>
+          <div class="flex items-center justify-center md:justify-start gap-2 pt-2 text-xs text-on-surface-variant font-medium">
+            <span class="text-rose-400 font-bold">Shrabani 🌸</span>
+            <span>•</span>
+            <span id="japanese-vault-track-counter">30 songs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-between gap-4 mt-space-lg py-2 border-b border-surface-variant/40">
+        <div class="flex items-center gap-4">
+          <button onclick="playJapaneseVaultTrackByIndex(0)" class="w-14 h-14 rounded-full bg-rose-600 text-white flex items-center justify-center shadow-2xl hover:scale-105 transition-transform" title="Play All">
+            <span class="material-symbols-outlined text-[32px]">play_arrow</span>
+          </button>
+          <button onclick="shuffleAndPlayAllJapanese()" class="w-10 h-10 rounded-full bg-surface-container text-on-surface-variant hover:text-rose-400 flex items-center justify-center transition-colors" title="Shuffle">
+            <span class="material-symbols-outlined text-[22px]">shuffle</span>
+          </button>
+          <button onclick="toggleFav(this)" class="w-10 h-10 rounded-full bg-surface-container text-on-surface-variant hover:text-rose-400 flex items-center justify-center transition-colors" title="Save Playlist">
+            <span class="material-symbols-outlined text-[22px]">favorite_border</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-12 gap-2 px-4 py-3 text-xs text-on-surface-variant font-label-md uppercase tracking-wider mt-4 border-b border-surface-variant/30">
+        <div class="col-span-1 text-center">#</div>
+        <div class="col-span-6 md:col-span-5">Title</div>
+        <div class="hidden md:block col-span-3">Album / Category</div>
+        <div class="hidden sm:block col-span-3 md:col-span-2 text-right">Artist</div>
+        <div class="col-span-5 sm:col-span-2 md:col-span-1 text-right flex justify-end">
+          <span class="material-symbols-outlined text-[16px]">schedule</span>
+        </div>
+      </div>
+
+      <div id="japanese-vault-tracks-container" class="space-y-1 mt-2"></div>
     </div>
   </div>
 
@@ -2355,25 +2470,39 @@
 
       <div class="space-y-4 font-body-lg text-on-surface-variant leading-relaxed px-2 md:px-8">
         <p>
-          I wanted to create this little sanctuary for you—a place where the noise of the world fades away, leaving only the melodies that feel like home. 
+           I know I haven’t been able to give you much, and I’ve never really been able to prove myself to you either. But today is very special to me, because if this day had never happened, I would have never found you.
         </p>
         <p>
-          Every time you feel overwhelmed, or you just need a quiet moment to yourself, I hope you come here. Let these songs remind you of all the beautiful moments we’ve shared, the midnight conversations, and the uncontrollable laughs.
+          I feel incredibly lucky to have someone like you in my life. Honestly, I’m happy just knowing that you’re my friend and such an important part of my life. You’re someone who has always influenced me in so many ways and given me strength whenever I needed it.
         </p>
         <p>
-          You are the brightest light, incredibly strong, and genuinely one of a kind. Never forget that. 
+          I just want you to always remember one thing: no matter what the situation is, I’ll always be there for you. In fact, I’d always want to be around you, but I know that isn’t always possible. So, as a good friend and a genuine person, I’ll always stand by your side whenever you need me. 
         </p>
         <p class="text-primary font-quote-italic italic mt-8 text-xl text-center">
-          "A true friend is the melody that makes life's song beautiful."
+          "Those few months I spent with you are one of the best parts of my life. So, thank you—truly, thank you so, so much for being a part of it. ❤️"
         </p>
         <p class="text-right mt-6 font-title-md text-on-surface">
           With all my love,<br>
-          <span class="text-primary">Your Best Friend ✨</span>
+          <span class="text-primary">Pri... ✨</span>
         </p>
       </div>
 
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer class="relative z-10 w-full bg-surface-container-lowest/80 backdrop-blur-xl mt-space-xl shadow-[0_-4px_24px_rgba(15,8,22,0.6)]">
+    <div class="max-w-[1280px] mx-auto px-gutter md:px-margin py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md text-center md:text-left">
+      <div class="space-y-1">
+        <p class="font-headline-md text-headline-md text-primary">An infinite sanctuary for Shrabani</p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant">Handcrafted with timeless chords, quiet twilight memories, and devotion.</p>
+      </div>
+      <div class="flex items-center gap-space-md">
+        <span class="px-space-md py-1 rounded-full bg-surface-container-high/70 text-tertiary font-label-sm text-label-sm">Keepsake Mixtape Edition</span>
+        <span class="px-space-md py-1 rounded-full bg-surface-container-high/70 text-secondary font-label-sm text-label-sm">Forever &amp; Always</span>
+      </div>
+    </div>
+  </footer>
 
   <!-- =========================================================================
        SECTION 8: PROPER CENTERED SPOTIFY-STYLE BOTTOM PLAYER DOCK
@@ -2385,7 +2514,7 @@
       <div class="flex items-center gap-3 min-w-0 w-full md:w-1/4 justify-between md:justify-start">
         <div class="flex items-center gap-3 min-w-0">
           <div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0 relative shadow group border border-primary/30">
-            <img id="dock-cover" class="w-full h-full object-cover rotating-disc" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzJ1L5aW1ahIJjmp_cULm00qsOzUHifr6mh3zYLzYnS_CYDEp7IUhgiuVuxpn2iA2yJbcT9pGtnKqXU85DefrWmOj9_24u6hnCJLQ_7f_R3udSgACNwQgtC6Mo1nATpvbqwJeCA3-12jHVToUvyzSJ7DvoaKoLZMrVsX42dbpFN09g_8m7C0j4DbuZp8WIIXh4Qykx6fr1ZwZPegsbLShDCPRYbXSM_7981tWi1VjfsxSUarks6Jsp2g" alt="Disc">
+           <img class="w-full h-full object-cover" src="image/BOTTOM PLAYER/pretty-cute-teddy-bear-illustration-design_768745-372.png" alt="Disc">
           </div>
           <div class="min-w-0 pr-1">
             <p class="font-title-md text-sm md:text-base text-primary font-bold truncate leading-tight" id="dock-title">APT. (with Bruno Mars)</p>
