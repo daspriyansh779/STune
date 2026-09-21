@@ -247,7 +247,7 @@ const japaneseTracks = [
 
 // --- ENGLISH TRACKS ---
 const englishTracks = [
-  { id: 201, title: "A Thousand Years", artist: "Christina Perri", album: "Single", duration: "4:45", file: "music/english/A Thousand Years - Christina Perri [ Lyrics + Vietsub ] - FinGateway.mp3" },
+  { id: 201, title: "A Thousand Years", artist: "Christina Perri", album: "Single", duration: "4:45", file: "music/ENGLISH/A Thousand Years - Christina Perri [ Lyrics + Vietsub ] - FinGateway.mp3" },
   { id: 202, title: "Daylight", artist: "David Kushner", album: "Single", duration: "3:32", file: "music/english/David Kushner - Daylight (Official Music Video) - DavidKushnerVEVO.mp3" },
   { id: 203, title: "Training Season", artist: "Dua Lipa", album: "Single", duration: "3:29", file: "music/english/Dua Lipa - Training Season - LatinHype.mp3" },
   { id: 204, title: "Perfect", artist: "Ed Sheeran", album: "Single", duration: "4:23", file: "music/english/Ed Sheeran - Perfect (Lyrics) - 7clouds.mp3" },
