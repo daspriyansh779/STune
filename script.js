@@ -173,7 +173,7 @@ const btsTracks = [
   { id: 104, title: "Blue & Grey", artist: "BTS", category: "all", album: "BE", duration: "4:15", file: "music/BLACKPINK/BTS/Blue & Grey - BTS.mp3" },
   { id: 105, title: "Body to Body", artist: "BTS", category: "all", album: "Bangtan Vault", duration: "3:10", file: "music/BLACKPINK/BTS/BTS (방탄소년단) 'Body to Body' (Color Coded Lyrics) - Jaeguchi.mp3" },
   { id: 106, title: "Boy With Luv (Japanese ver.)", artist: "BTS", category: "all", album: "Map of the Soul: 7", duration: "3:51", file: "music/BLACKPINK/BTS/Boy With Luv (Japanese ver.) - BTS.mp3" },
-  { id: 107, title: "Le Jazz de", artist: "BTS", category: "all", album: "HYBE Labels Edition", duration: "3:20", file: "music/BLACKPINK/BTS/Le Jazz de V Live Clip 2023BTSFESTA - BANGTANTV.mp3" },
+  { id: 107, title: "Le Jazz de", artist: "BTS", category: "all", album: "HYBE Labels Edition", duration: "3:20", file: "music/BLACKPINK/BTS/'Le Jazz de V' Live Clip 2023BTSFESTA - BANGTANTV.mp3" },
   { id: 108, title: "NORMAL", artist: "BTS", category: "all", album: "HYBE Labels Edition", duration: "3:18", file: "music/BLACKPINK/BTS/BTS (방탄소년단) ‘NORMAL’ Official MV - HYBE LABELS.mp3" },
   { id: 109, title: "SWIM", artist: "BTS", category: "all", album: "HYBE Labels Edition", duration: "3:25", file: "music/BLACKPINK/BTS/BTS (방탄소년단) ‘SWIM’ Official MV - HYBE LABELS.mp3" },
   { id: 110, title: "2.0", artist: "BTS", category: "all", album: "HYBE Labels Edition", duration: "3:05", file: "music/BLACKPINK/BTS/BTS (방탄소년단) '2.0' Official MV - HYBE LABELS.mp3" },
