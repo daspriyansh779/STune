@@ -253,7 +253,7 @@ const englishTracks = [
   { id: 204, title: "Perfect", artist: "Ed Sheeran", album: "Single", duration: "4:23", file: "music/ENGLISH/Ed Sheeran - Perfect (Lyrics) - 7clouds.mp3" },
   { id: 205, title: "Can't Help Falling In Love", artist: "Elvis Presley", album: "Single", duration: "3:02", file: "music/ENGLISH/Elvis Presley — Can't Help Falling In Love [Sub. Español] - armxndo.mp3" },
   { id: 206, title: "I Think They Call This Love", artist: "Matthew Ifield", album: "Single", duration: "2:50", file: "music/ENGLISH/I Think They Call This Love - Matthew Ifield [Sub español + Eng] Official Video - IMAGINA si....mp3" },
-  { id: 207, title: "I Wanna Be Yours", artist: "Arctic Monkeys", album: "Single", duration: "3:04", file: "music/ENGLISH/I wanna be yours - arctic monkeys - Ohee creation.mp3" },
+  { id: 207, title: "I Wanna Be Yours", artist: "Arctic Monkeys", album: "Single", duration: "3:04", file: "music/ENGLISH/I wanna be yours - arctic monkeys - 𝙊𝙝𝙚𝙚 𝙘𝙧𝙚𝙖𝙩𝙞𝙤𝙣.mp3" },
   { id: 208, title: "her", artist: "JVKE", album: "Single", duration: "2:45", file: "music/ENGLISH/JVKE - her (official lyric video) - JVKE.mp3" },
   { id: 209, title: "Die With A Smile", artist: "Lady Gaga, Bruno Mars", album: "Single", duration: "4:11", file: "music/ENGLISH/Lady Gaga, Bruno Mars - Die With A Smile (Official Music Video) - LadyGagaVEVO.mp3" },
   { id: 210, title: "Summertime Sadness", artist: "Lana Del Rey", album: "Single", duration: "4:25", file: "music/ENGLISH/Lana Del Rey - Summertime Sadness (Official Music Video) - LanaDelReyVEVO.mp3" },
