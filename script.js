@@ -147,7 +147,7 @@ const blackpinkTracks = [
   { id: 23, title: "FALLEN ANGEL", artist: "JENNIE", category: "jennie", album: "JennieRubyJane Era", duration: "3:14", file: "music/BLACKPINK/JENNIE - FALLEN ANGEL (Official Video) - JennieRubyJaneVEVO.mp3" },
   { id: 24, title: "Less than a Lover", artist: "JENNIE", category: "jennie", album: "JennieRubyJane Era", duration: "2:48", file: "music/BLACKPINK/JENNIE - Less than a Lover (Official Video) - JennieRubyJaneVEVO.mp3" },
   { id: 25, title: "like JENNIE", artist: "JENNIE", category: "jennie", album: "JennieRubyJane Era", duration: "3:05", file: "music/BLACKPINK/JENNIE - like JENNIE (Official Video) - JennieRubyJaneVEVO.mp3" },
-  { id: 26, title: "Mantra", artist: "JENNIE", category: "jennie", album: "Single", duration: "2:16", file: "music/BLACKPINK/JENNIE - Mantra (Official Video) - JennieRubyJaneEVO.mp3" },
+  { id: 26, title: "Mantra", artist: "JENNIE", category: "jennie", album: "Single", duration: "2:16", file: "music/BLACKPINK/JENNIE - Mantra (Official Video) - JennieRubyJaneVEVO.mp3" },
   { id: 27, title: "SOLO", artist: "JENNIE", category: "jennie", album: "SOLO Album", duration: "2:49", file: "music/BLACKPINK/JENNIE - 'SOLO' M_V - BLACKPINK.mp3" },
   { id: 28, title: "Flower (꽃)", artist: "JISOO", category: "jisoo", album: "ME", duration: "2:53", file: "music/BLACKPINK/JISOO - ‘꽃(FLOWER)’ M_V - BLACKPINK.mp3" },
   { id: 29, title: "CLICK", artist: "JISOO", category: "jisoo", album: "Single", duration: "3:08", file: "music/BLACKPINK/JISOO - CLICK (Official MV) - JISOO.mp3" },
