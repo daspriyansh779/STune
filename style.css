@@ -32,23 +32,12 @@ main > :last-child { margin-bottom: 0 !important; }
   100% { background-position: 0% 50%; }
 }
 
-/* Premium, soft glowing pulse for sections/cards */
-@keyframes ambientGlow {
-  0% { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(244, 166, 205, 0.05); }
-  50% { box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(244, 166, 205, 0.2); transform: translateY(-5px) scale(1.01); }
-  100% { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(244, 166, 205, 0.05); }
-}
-
 /* =========================================================================
    SECTION & CARD HOVER EFFECTS (Professional Polish)
 ========================================================================= */
 section, .rounded-xl {
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   will-change: transform, box-shadow;
-}
-
-section:hover, .rounded-xl:hover {
-  animation: ambientGlow 4s ease-in-out infinite;
 }
 
 /* Spotify Track Row Styling */
