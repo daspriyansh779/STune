@@ -354,6 +354,7 @@ const hindiTracks = [
   { id: 532, title: "Vaaroon Forever", artist: "Shreya Ghoshal", album: "Mirzapur The Movie", duration: "4:35", file: "music/HINDI/Vaaroon Forever (Official Video)  Mirzapur The Movie  Shreya Ghoshal  Romy  Anand B  Ginny D - Excel Movies.mp3" }
 ];
 
+
 const masterPlaylist = [
   ...blackpinkTracks,
   ...btsTracks,
@@ -417,6 +418,18 @@ function updatePlaybackUI(playing) {
   renderBtsVaultTracks(getFilteredBtsVaultList());
   renderJapaneseVaultTracks(getFilteredJapaneseVaultList());
   renderBengaliSpecialTracks();
+  highlightActiveDomRows();
+}
+
+function highlightActiveDomRows() {
+  document.querySelectorAll('[onclick*="playAudioTrack"]').forEach(row => {
+    const text = row.textContent;
+    if (activePlayingTitle && text.toLowerCase().includes(activePlayingTitle.toLowerCase())) {
+      row.classList.add('border-primary', 'bg-primary/10', 'shadow-inner');
+    } else {
+      row.classList.remove('border-primary', 'bg-primary/10', 'shadow-inner');
+    }
+  });
 }
 
 function handleUniversalTrackClick(trackId, trackList) {
@@ -484,6 +497,7 @@ function playAudioTrack(title, artist, album, filePath = null, trackId = null) {
       updatePlaybackUI(true);
     });
   }
+  highlightActiveDomRows();
 }
 
 function playSection(sectionName) {
