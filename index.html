@@ -379,7 +379,7 @@
           <div class="mt-space-lg pt-space-md max-w-4xl mx-auto">
             <div class="relative w-full">
               <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-tertiary-fixed-dim text-[22px]">search</span>
-              <input id="sanctuary-search" class="w-full pl-12 pr-12 py-3.5 rounded-full bg-surface-container-highest/60 backdrop-blur-2xl text-on-surface placeholder:text-on-surface-variant/50 font-body-md text-body-md focus:outline-none focus:bg-surface-container-highest transition-all shadow-inner" placeholder="Search tracks, moods, BTS verses, or sweet Bengali melodies..." type="text">
+              <input id="sanctuary-search" class="w-full pl-12 pr-12 py-3.5 rounded-full bg-surface-container-highest/60 backdrop-blur-2xl text-on-surface placeholder:text-on-surface-variant/50 font-body-md text-body-md focus:outline-none focus:bg-surface-container transition-all shadow-inner" placeholder="Search tracks, moods, BTS verses, or sweet Bengali melodies..." type="text">
               <button class="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container shadow-md hover:scale-105 transition-transform" title="Music Search">
                 <span class="material-symbols-outlined text-[18px]">music_note</span>
               </button>
@@ -399,17 +399,24 @@
           </div>
         </section>
 
-        <!-- Quick Filter Anchor Rail -->
-        <div class="mt-space-lg flex items-center gap-space-sm overflow-x-auto pb-2 scrollbar-none">
-          <a class="px-space-md py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap shadow-md hover:shadow-lg transition-all" href="#section-blackpink">✨ BLACKPINK (41 Songs)</a>
-          <a class="px-space-md py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md whitespace-nowrap hover:shadow-lg transition-all" href="#section-bts">💜 BTS ARMY (41 Songs)</a>
-          <!-- NEW JAPANESE FILTER BUTTON -->
-          <a class="px-space-md py-1.5 rounded-full bg-rose-500/20 text-rose-200 border border-rose-500/30 font-label-md text-label-md whitespace-nowrap hover:shadow-lg hover:bg-rose-500/40 transition-all" href="#section-japanese">🌸 J-Pop & Anime (30 Songs)</a>
-          <a class="px-space-md py-1.5 rounded-full bg-surface-container-high text-tertiary font-label-md text-label-md whitespace-nowrap hover:bg-tertiary hover:text-on-tertiary transition-all" href="#section-english">🌙 English Hits</a>
-          <a class="px-space-md py-1.5 rounded-full bg-surface-container-high text-primary-fixed font-label-md text-label-md whitespace-nowrap hover:bg-primary-fixed hover:text-on-primary-fixed transition-all" href="#section-bengali">🍃 Sweet Bengali</a>
-          <a class="px-space-md py-1.5 rounded-full bg-surface-container-high text-tertiary-fixed font-label-md text-label-md whitespace-nowrap hover:bg-tertiary-fixed hover:text-on-tertiary-fixed transition-all" href="#section-hindi">🪔 Soulful Hindi</a>
-          <a class="px-space-md py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md whitespace-nowrap hover:shadow-lg transition-all" href="#section-for-you">💌 Curated For Shrabani</a>
-          <a class="px-space-md py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap hover:shadow-lg transition-all" href="#section-notes">📝 Friendship Notes</a>
+        <!-- QUICK FILTER ANCHOR RAIL WITH SCROLL BAR -->
+        <div class="mt-space-lg relative group">
+          <div class="absolute -left-2 top-1/2 -translate-y-1/2 z-10 text-primary/60 pointer-events-none hidden md:block">
+            <span class="material-symbols-outlined text-[20px] animate-pulse">chevron_left</span>
+          </div>
+          <div class="absolute -right-2 top-1/2 -translate-y-1/2 z-10 text-primary/60 pointer-events-none hidden md:block">
+            <span class="material-symbols-outlined text-[20px] animate-pulse">chevron_right</span>
+          </div>
+          <div class="flex items-center gap-space-sm overflow-x-auto pb-3 pt-1 px-2 scrollbar-thin scrollbar-thumb-primary/30 scrollbar-track-surface-container-high rounded-xl bg-surface-container-low/60 backdrop-blur-md border border-surface-variant/30">
+            <a class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md whitespace-nowrap shadow-md hover:shadow-lg transition-all flex items-center gap-1.5" href="#section-blackpink">✨ BLACKPINK (41 Songs)</a>
+            <a class="px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md whitespace-nowrap hover:shadow-lg transition-all flex items-center gap-1.5" href="#section-bts">💜 BTS ARMY (41 Songs)</a>
+            <a class="px-4 py-2 rounded-full bg-rose-500/20 text-rose-200 border border-rose-500/30 font-label-md text-label-md whitespace-nowrap hover:shadow-lg hover:bg-rose-500/40 transition-all flex items-center gap-1.5" href="#section-japanese">🌸 J-Pop & Anime (30 Songs)</a>
+            <a class="px-4 py-2 rounded-full bg-surface-container-high text-tertiary font-label-md text-label-md whitespace-nowrap hover:bg-tertiary hover:text-on-tertiary transition-all flex items-center gap-1.5" href="#section-english">🌙 English Hits</a>
+            <a class="px-4 py-2 rounded-full bg-surface-container-high text-primary-fixed font-label-md text-label-md whitespace-nowrap hover:bg-primary-fixed hover:text-on-primary-fixed transition-all flex items-center gap-1.5" href="#section-bengali">🍃 Sweet Bengali</a>
+            <a class="px-4 py-2 rounded-full bg-surface-container-high text-tertiary-fixed font-label-md text-label-md whitespace-nowrap hover:bg-tertiary-fixed hover:text-on-tertiary-fixed transition-all flex items-center gap-1.5" href="#section-hindi">🪔 Soulful Hindi</a>
+            <a class="px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md whitespace-nowrap hover:shadow-lg transition-all flex items-center gap-1.5" href="#section-for-you">💌 Curated For Shrabani</a>
+            <a class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap hover:shadow-lg transition-all flex items-center gap-1.5" href="#section-notes">📝 Friendship Notes</a>
+          </div>
         </div>
 
         <!-- SECTION 1: BLACKPINK VAULT -->
@@ -619,7 +626,7 @@
 
               <div class="space-y-space-sm max-h-[450px] overflow-y-auto pr-2 playlist-scroll">
                 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('A Thousand Years', 'Christina Perri', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('A Thousand Years', 'Christina Perri', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">01</div>
                     <div class="min-w-0">
@@ -634,7 +641,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Daylight', 'David Kushner', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('Daylight', 'David Kushner', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-md flex-shrink-0">02</div>
                     <div class="min-w-0">
@@ -649,7 +656,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Training Season', 'Dua Lipa', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('Training Season', 'Dua Lipa', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">03</div>
                     <div class="min-w-0">
@@ -664,7 +671,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Perfect', 'Ed Sheeran', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('Perfect', 'Ed Sheeran', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-md flex-shrink-0">04</div>
                     <div class="min-w-0">
@@ -679,7 +686,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="handleUniversalTrackClick(205, englishTracks)">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="handleUniversalTrackClick(205, englishTracks)">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">05</div>
                     <div class="min-w-0">
@@ -694,7 +701,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('I Think They Call This Love', 'Matthew Ifield', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('I Think They Call This Love', 'Matthew Ifield', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-md flex-shrink-0">06</div>
                     <div class="min-w-0">
@@ -709,7 +716,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('I Wanna Be Yours', 'Arctic Monkeys', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('I Wanna Be Yours', 'Arctic Monkeys', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">07</div>
                     <div class="min-w-0">
@@ -724,7 +731,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('her', 'JVKE', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('her', 'JVKE', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-md flex-shrink-0">08</div>
                     <div class="min-w-0">
@@ -739,7 +746,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Die With A Smile', 'Lady Gaga, Bruno Mars', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('Die With A Smile', 'Lady Gaga, Bruno Mars', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">09</div>
                     <div class="min-w-0">
@@ -754,7 +761,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Summertime Sadness', 'Lana Del Rey', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('Summertime Sadness', 'Lana Del Rey', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-md flex-shrink-0">10</div>
                     <div class="min-w-0">
@@ -769,7 +776,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('The Night We Met', 'Lord Huron', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('The Night We Met', 'Lord Huron', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">11</div>
                     <div class="min-w-0">
@@ -784,7 +791,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Co2', 'Prateek Kuhad', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('Co2', 'Prateek Kuhad', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-md flex-shrink-0">12</div>
                     <div class="min-w-0">
@@ -799,7 +806,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Espresso', 'Sabrina Carpenter', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('Espresso', 'Sabrina Carpenter', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">13</div>
                     <div class="min-w-0">
@@ -814,7 +821,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Snowman', 'Sia', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('Snowman', 'Sia', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-md flex-shrink-0">14</div>
                     <div class="min-w-0">
@@ -829,7 +836,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Until I Found You', 'Stephen Sanchez', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('Until I Found You', 'Stephen Sanchez', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">15</div>
                     <div class="min-w-0">
@@ -844,7 +851,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Delicate', 'Taylor Swift', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('Delicate', 'Taylor Swift', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-md flex-shrink-0">16</div>
                     <div class="min-w-0">
@@ -859,7 +866,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('I Knew It, I Knew You', 'Taylor Swift', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('I Knew It, I Knew You', 'Taylor Swift', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">17</div>
                     <div class="min-w-0">
@@ -874,7 +881,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Lover', 'Taylor Swift', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('Lover', 'Taylor Swift', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-md flex-shrink-0">18</div>
                     <div class="min-w-0">
@@ -889,7 +896,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('The Way I Loved You', 'Taylor Swift', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('The Way I Loved You', 'Taylor Swift', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">19</div>
                     <div class="min-w-0">
@@ -904,7 +911,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('I Love You So', 'The Walters', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('I Love You So', 'The Walters', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-md flex-shrink-0">20</div>
                     <div class="min-w-0">
@@ -919,7 +926,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('blue', 'yung kai', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-tertiary" onclick="playAudioTrack('blue', 'yung kai', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">21</div>
                     <div class="min-w-0">
@@ -983,7 +990,7 @@
               <!-- Scrollable List of 30 Bengali Songs -->
               <div class="space-y-space-sm max-h-[350px] overflow-y-auto pr-2 playlist-scroll">
                 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Aalote Chol', 'Srikanto', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Aalote Chol', 'Srikanto', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-fixed-dim text-on-primary-fixed flex items-center justify-center font-label-md flex-shrink-0">01</div>
                     <div class="min-w-0">
@@ -998,7 +1005,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Amake Nao', 'Srikanto', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Amake Nao', 'Srikanto', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-tertiary-fixed flex items-center justify-center font-label-md flex-shrink-0">02</div>
                     <div class="min-w-0">
@@ -1013,7 +1020,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Baundule Ghuri', 'Dawshom Awbotaar', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Baundule Ghuri', 'Dawshom Awbotaar', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">03</div>
                     <div class="min-w-0">
@@ -1028,7 +1035,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Behaya', 'Ekannoborti', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Behaya', 'Ekannoborti', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">04</div>
                     <div class="min-w-0">
@@ -1043,7 +1050,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Bhalobasha Jaari Achhey', 'Talmar Romeo Juliet', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Bhalobasha Jaari Achhey', 'Talmar Romeo Juliet', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-tertiary-fixed flex items-center justify-center font-label-md flex-shrink-0">05</div>
                     <div class="min-w-0">
@@ -1058,7 +1065,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Bhalobashar Morshum', 'X=Prem', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Bhalobashar Morshum', 'X=Prem', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">06</div>
                     <div class="min-w-0">
@@ -1073,7 +1080,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Darale Duaarey', 'Coke Studio Bangla', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Darale Duaarey', 'Coke Studio Bangla', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">07</div>
                     <div class="min-w-0">
@@ -1088,7 +1095,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Du Haatey Mutho Bhorey', 'Talmar Romeo Juliet', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Du Haatey Mutho Bhorey', 'Talmar Romeo Juliet', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-tertiary-fixed flex items-center justify-center font-label-md flex-shrink-0">08</div>
                     <div class="min-w-0">
@@ -1103,7 +1110,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Egiye de (Reprise)', 'Shudhu Tomari Jonyo', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Egiye de (Reprise)', 'Shudhu Tomari Jonyo', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">09</div>
                     <div class="min-w-0">
@@ -1118,7 +1125,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('EI MAYABI CHANDER RAATE', 'Baba Baby O', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('EI MAYABI CHANDER RAATE', 'Baba Baby O', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">10</div>
                     <div class="min-w-0">
@@ -1133,7 +1140,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Ek Minute Er Chumu', 'Hooligaanism', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Ek Minute Er Chumu', 'Hooligaanism', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-tertiary-fixed flex items-center justify-center font-label-md flex-shrink-0">11</div>
                     <div class="min-w-0">
@@ -1148,7 +1155,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Ekhon Onek Raat', 'Hemlock Society', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Ekhon Onek Raat', 'Hemlock Society', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">12</div>
                     <div class="min-w-0">
@@ -1163,7 +1170,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Gulbahar', 'Ishaan', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Gulbahar', 'Ishaan', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">13</div>
                     <div class="min-w-0">
@@ -1178,7 +1185,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Hridoyer Rong', 'Ghare And Baire', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Hridoyer Rong', 'Ghare And Baire', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-tertiary-fixed flex items-center justify-center font-label-md flex-shrink-0">14</div>
                     <div class="min-w-0">
@@ -1193,7 +1200,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Jawl Phoring', 'Hemlock Society', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Jawl Phoring', 'Hemlock Society', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">15</div>
                     <div class="min-w-0">
@@ -1208,7 +1215,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Je Kawta Din', 'Dwitiyo Purush', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Je Kawta Din', 'Dwitiyo Purush', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">16</div>
                     <div class="min-w-0">
@@ -1223,7 +1230,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Jodi Abar', 'Angel Noor', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Jodi Abar', 'Angel Noor', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-tertiary-fixed flex items-center justify-center font-label-md flex-shrink-0">17</div>
                     <div class="min-w-0">
@@ -1238,7 +1245,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Laal Rong', 'Talmar Romeo Juliet', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Laal Rong', 'Talmar Romeo Juliet', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">18</div>
                     <div class="min-w-0">
@@ -1253,7 +1260,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Long Distance Love', 'Coke Studio Bangla', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Long Distance Love', 'Coke Studio Bangla', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">19</div>
                     <div class="min-w-0">
@@ -1268,7 +1275,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Notun Premer Gaan', 'Ballabhpurer Roopkotha', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Notun Premer Gaan', 'Ballabhpurer Roopkotha', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-tertiary-fixed flex items-center justify-center font-label-md flex-shrink-0">20</div>
                     <div class="min-w-0">
@@ -1283,7 +1290,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Ogochhalo Mon', 'Taalpatar Shepai', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Ogochhalo Mon', 'Taalpatar Shepai', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">21</div>
                     <div class="min-w-0">
@@ -1298,7 +1305,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Oviman', 'Tanveer Evan', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Oviman', 'Tanveer Evan', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">22</div>
                     <div class="min-w-0">
@@ -1313,7 +1320,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Preme Pora Baron', 'Sweater', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Preme Pora Baron', 'Sweater', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-tertiary-fixed flex items-center justify-center font-label-md flex-shrink-0">23</div>
                     <div class="min-w-0">
@@ -1328,7 +1335,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Raikamal', 'Omorshongi', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Raikamal', 'Omorshongi', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">24</div>
                     <div class="min-w-0">
@@ -1343,7 +1350,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Shudhu Tomakei Bhalobese', 'Nilanjan', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Shudhu Tomakei Bhalobese', 'Nilanjan', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">25</div>
                     <div class="min-w-0">
@@ -1358,7 +1365,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Shudhu Tomari Jonyo', 'Title Track', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Shudhu Tomari Jonyo', 'Title Track', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-tertiary-fixed flex items-center justify-center font-label-md flex-shrink-0">26</div>
                     <div class="min-w-0">
@@ -1373,7 +1380,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Takey Olpo Kachhe Dakchhi', 'Prem Tame', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Takey Olpo Kachhe Dakchhi', 'Prem Tame', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">27</div>
                     <div class="min-w-0">
@@ -1388,7 +1395,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Tomake', 'Parineeta', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Tomake', 'Parineeta', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-md flex-shrink-0">28</div>
                     <div class="min-w-0">
@@ -1403,7 +1410,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Tomar Pichu Charbo Na', 'Nahid Hasan', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Tomar Pichu Charbo Na', 'Nahid Hasan', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-surface-container-highest text-tertiary-fixed flex items-center justify-center font-label-md flex-shrink-0">29</div>
                     <div class="min-w-0">
@@ -1418,7 +1425,7 @@
                   </div>
                 </div>
 
-                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer" onclick="playAudioTrack('Tumi Bristi Cheyecho Bole', 'Mahtim Sakib', 'Single')">
+                <div class="flex items-center justify-between p-space-sm rounded-DEFAULT bg-surface-container hover:bg-surface-container-high transition-colors group cursor-pointer border-l-2 border-transparent hover:border-primary" onclick="playAudioTrack('Tumi Bristi Cheyecho Bole', 'Mahtim Sakib', 'Single')">
                   <div class="flex items-center gap-space-md min-w-0">
                     <div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-md flex-shrink-0">30</div>
                     <div class="min-w-0">
@@ -1471,7 +1478,7 @@
           <div class="max-h-[600px] overflow-y-auto pr-2 playlist-scroll">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md pb-4">
               
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Pal Pal', 'AFUSIC', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-label-sm">Pure Emotion</span>
@@ -1482,14 +1489,14 @@
                   <p class="font-quote-italic text-[13px] text-primary italic line-clamp-2">"Every second with you feels like a beautiful dream come true."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Pal Pal', 'AFUSIC', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Pal Pal', 'AFUSIC', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('ALAG AASMAAN', 'Anuv Jain', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary text-[10px] font-label-sm">Acoustic Pop</span>
@@ -1500,14 +1507,14 @@
                   <p class="font-quote-italic text-[13px] text-secondary italic line-clamp-2">"Even under different skies, our hearts beat the same rhythm."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('ALAG AASMAAN', 'Anuv Jain', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('ALAG AASMAAN', 'Anuv Jain', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('GUL', 'Anuv Jain', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-tertiary/20 text-tertiary text-[10px] font-label-sm">Indie Soul</span>
@@ -1518,14 +1525,14 @@
                   <p class="font-quote-italic text-[13px] text-tertiary italic line-clamp-2">"Like a blooming flower, your smile brightens my darkest days."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('GUL', 'Anuv Jain', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('GUL', 'Anuv Jain', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('HUSN', 'Anuv Jain', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-label-sm">Heartbreak</span>
@@ -1536,14 +1543,14 @@
                   <p class="font-quote-italic text-[13px] text-primary italic line-clamp-2">"Your beauty isn't just in your eyes, it's in the way you make me feel."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('HUSN', 'Anuv Jain', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('HUSN', 'Anuv Jain', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Arz Kiya Hai', 'Anuv Jain, Lost Stories', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary text-[10px] font-label-sm">Coke Studio</span>
@@ -1554,14 +1561,14 @@
                   <p class="font-quote-italic text-[13px] text-secondary italic line-clamp-2">"Let me express the unsaid poetry my heart holds for you."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Arz Kiya Hai', 'Anuv Jain, Lost Stories', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Arz Kiya Hai', 'Anuv Jain, Lost Stories', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Tainu Khabar Nahi', 'Arijit Singh', 'Munjya')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-tertiary/20 text-tertiary text-[10px] font-label-sm">Romantic Warmth</span>
@@ -1572,14 +1579,14 @@
                   <p class="font-quote-italic text-[13px] text-tertiary italic line-clamp-2">"You have no idea how much my soul yearns for your presence."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Tainu Khabar Nahi', 'Arijit Singh', 'Munjya')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Tainu Khabar Nahi', 'Arijit Singh', 'Munjya')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Aaya Na Tu', 'Arjun Kanungo, Momina', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-label-sm">Melancholy</span>
@@ -1590,14 +1597,14 @@
                   <p class="font-quote-italic text-[13px] text-primary italic line-clamp-2">"Waiting for you is a silent ache disguised as hope."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Aaya Na Tu', 'Arjun Kanungo, Momina', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Aaya Na Tu', 'Arjun Kanungo, Momina', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Hawa Banke', 'Darshan Raval', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary text-[10px] font-label-sm">Breezy</span>
@@ -1608,14 +1615,14 @@
                   <p class="font-quote-italic text-[13px] text-secondary italic line-clamp-2">"You swept into my life like a gentle, refreshing breeze."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Hawa Banke', 'Darshan Raval', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Hawa Banke', 'Darshan Raval', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Dil Tu Jaan Tu', 'Gurnazar', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-tertiary/20 text-tertiary text-[10px] font-label-sm">Soulful</span>
@@ -1626,14 +1633,14 @@
                   <p class="font-quote-italic text-[13px] text-tertiary italic line-clamp-2">"You are my heart, my soul, and my entire world."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Dil Tu Jaan Tu', 'Gurnazar', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Dil Tu Jaan Tu', 'Gurnazar', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Farq Hai', 'Suzonn', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-label-sm">Acoustic</span>
@@ -1644,14 +1651,14 @@
                   <p class="font-quote-italic text-[13px] text-primary italic line-clamp-2">"There is a beautiful difference in the way you look at the world."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Farq Hai', 'Suzonn', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Farq Hai', 'Suzonn', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Finding Her', 'Tanishka Bahl', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary text-[10px] font-label-sm">Love Song</span>
@@ -1662,14 +1669,14 @@
                   <p class="font-quote-italic text-[13px] text-secondary italic line-clamp-2">"In a world full of strangers, finding you felt like coming home."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Finding Her', 'Tanishka Bahl', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Finding Her', 'Tanishka Bahl', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Hona Tha Pyar', 'Atif Aslam', 'Bol')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-tertiary/20 text-tertiary text-[10px] font-label-sm">Classic Romance</span>
@@ -1680,14 +1687,14 @@
                   <p class="font-quote-italic text-[13px] text-tertiary italic line-clamp-2">"We were destined to fall in love, as naturally as breathing."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Hona Tha Pyar', 'Atif Aslam', 'Bol')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Hona Tha Pyar', 'Atif Aslam', 'Bol')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Jhol', 'Maanu, Annural Khalid', 'Coke Studio')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-label-sm">Groove</span>
@@ -1698,14 +1705,14 @@
                   <p class="font-quote-italic text-[13px] text-primary italic line-clamp-2">"Your charming mischief makes my heart skip a beat every time."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Jhol', 'Maanu, Annural Khalid', 'Coke Studio')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Jhol', 'Maanu, Annural Khalid', 'Coke Studio')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Kahani Suno 2.0', 'Kaifi Khalil', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary text-[10px] font-label-sm">Emotion</span>
@@ -1716,14 +1723,14 @@
                   <p class="font-quote-italic text-[13px] text-secondary italic line-clamp-2">"Listen to the story of a heart that beats only for you."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Kahani Suno 2.0', 'Kaifi Khalil', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Kahani Suno 2.0', 'Kaifi Khalil', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Kalyani', 'ARJN, Shreya Ghoshal', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-tertiary/20 text-tertiary text-[10px] font-label-sm">Melodious</span>
@@ -1734,14 +1741,14 @@
                   <p class="font-quote-italic text-[13px] text-tertiary italic line-clamp-2">"Your voice is the sweetest melody my ears have ever known."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Kalyani', 'ARJN, Shreya Ghoshal', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Kalyani', 'ARJN, Shreya Ghoshal', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Kashish', 'Ashish Bhatia', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-label-sm">Attraction</span>
@@ -1752,14 +1759,14 @@
                   <p class="font-quote-italic text-[13px] text-primary italic line-clamp-2">"There is an irresistible pull that keeps drawing me back to you."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Kashish', 'Ashish Bhatia', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Kashish', 'Ashish Bhatia', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Keh Do Na', 'Nihal Ahmed', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary text-[10px] font-label-sm">Confession</span>
@@ -1770,14 +1777,14 @@
                   <p class="font-quote-italic text-[13px] text-secondary italic line-clamp-2">"Say the words my heart has been waiting a lifetime to hear."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Keh Do Na', 'Nihal Ahmed', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Keh Do Na', 'Nihal Ahmed', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Tu Aake Dekhle', 'King', 'The Carnival')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-tertiary/20 text-tertiary text-[10px] font-label-sm">Vibes</span>
@@ -1788,14 +1795,14 @@
                   <p class="font-quote-italic text-[13px] text-tertiary italic line-clamp-2">"Come and see the empire of love I've built just for you."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Tu Aake Dekhle', 'King', 'The Carnival')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Tu Aake Dekhle', 'King', 'The Carnival')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Maand', 'Bayaan, Hasan Raheem', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-label-sm">Rhythm</span>
@@ -1806,14 +1813,14 @@
                   <p class="font-quote-italic text-[13px] text-primary italic line-clamp-2">"A gentle rhythm that perfectly matches our quiet moments together."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Maand', 'Bayaan, Hasan Raheem', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Maand', 'Bayaan, Hasan Raheem', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Majboor', 'Sheheryar Rehan', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary text-[10px] font-label-sm">Deep Love</span>
@@ -1824,14 +1831,14 @@
                   <p class="font-quote-italic text-[13px] text-secondary italic line-clamp-2">"I am helplessly, deeply, and beautifully in love with you."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Majboor', 'Sheheryar Rehan', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Majboor', 'Sheheryar Rehan', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Nadaaniyan', 'Akshath', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-tertiary/20 text-tertiary text-[10px] font-label-sm">Innocence</span>
@@ -1842,14 +1849,14 @@
                   <p class="font-quote-italic text-[13px] text-tertiary italic line-clamp-2">"Our innocent little mistakes only made this love story sweeter."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Nadaaniyan', 'Akshath', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Nadaaniyan', 'Akshath', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Nafrat', 'Darshan Raval', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-label-sm">Heartache</span>
@@ -1860,14 +1867,14 @@
                   <p class="font-quote-italic text-[13px] text-primary italic line-clamp-2">"Even in moments of anger, my heart secretly cares for you."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Nafrat', 'Darshan Raval', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Nafrat', 'Darshan Raval', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Aarzu', 'Noor, Khan, Madhurxo', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary text-[10px] font-label-sm">Desire</span>
@@ -1878,14 +1885,14 @@
                   <p class="font-quote-italic text-[13px] text-secondary italic line-clamp-2">"You are the ultimate desire my soul has been searching for."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Aarzu', 'Noor, Khan, Madhurxo', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Aarzu', 'Noor, Khan, Madhurxo', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('O Meri Laila', 'Atif Aslam, Jyotica', 'Laila Majnu')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-tertiary/20 text-tertiary text-[10px] font-label-sm">Epic Romance</span>
@@ -1896,14 +1903,14 @@
                   <p class="font-quote-italic text-[13px] text-tertiary italic line-clamp-2">"My love for you is as deep and timeless as an epic tale."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('O Meri Laila', 'Atif Aslam, Jyotica', 'Laila Majnu')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('O Meri Laila', 'Atif Aslam, Jyotica', 'Laila Majnu')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Dooron Dooron', 'Paresh Pahuja', 'Live')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-label-sm">Longing</span>
@@ -1914,14 +1921,14 @@
                   <p class="font-quote-italic text-[13px] text-primary italic line-clamp-2">"Even from afar, your energy wraps around me like a warm hug."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Dooron Dooron', 'Paresh Pahuja', 'Live')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Dooron Dooron', 'Paresh Pahuja', 'Live')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Saari Ki Saari 2.0', 'Darshan Raval, Asees Kaur', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary text-[10px] font-label-sm">Devotion</span>
@@ -1932,14 +1939,14 @@
                   <p class="font-quote-italic text-[13px] text-secondary italic line-clamp-2">"Every single piece of my heart belongs completely to you."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Saari Ki Saari 2.0', 'Darshan Raval, Asees Kaur', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Saari Ki Saari 2.0', 'Darshan Raval, Asees Kaur', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Sajna', 'Darshan Raval', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-tertiary/20 text-tertiary text-[10px] font-label-sm">Beloved</span>
@@ -1950,14 +1957,14 @@
                   <p class="font-quote-italic text-[13px] text-tertiary italic line-clamp-2">"My beloved, you are the melody to my life's lyrics."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Sajna', 'Darshan Raval', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Sajna', 'Darshan Raval', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Tera Zikr', 'Darshan Raval', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-label-sm">Remembrance</span>
@@ -1968,14 +1975,14 @@
                   <p class="font-quote-italic text-[13px] text-primary italic line-clamp-2">"Your name is the most frequent prayer on my lips."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Tera Zikr', 'Darshan Raval', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Tera Zikr', 'Darshan Raval', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Teri Aankhon Mein', 'Darshan R, Neha K', 'Single')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary text-[10px] font-label-sm">Romance</span>
@@ -1986,14 +1993,14 @@
                   <p class="font-quote-italic text-[13px] text-secondary italic line-clamp-2">"I see my entire future sparkling right there in your eyes."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Teri Aankhon Mein', 'Darshan R, Neha K', 'Single')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Teri Aankhon Mein', 'Darshan R, Neha K', 'Single')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Maahiya', 'Tushar Joshi, Neeti Mohan', 'The Revolutionaries')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-tertiary/20 text-tertiary text-[10px] font-label-sm">Revolution</span>
@@ -2004,14 +2011,14 @@
                   <p class="font-quote-italic text-[13px] text-tertiary italic line-clamp-2">"You are the revolution my heart desperately needed, my love."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Maahiya', 'Tushar Joshi, Neeti Mohan', 'The Revolutionaries')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Maahiya', 'Tushar Joshi, Neeti Mohan', 'The Revolutionaries')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Tum Ho Toh', 'Vishal Mishra', 'Saiyaara')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary text-[10px] font-label-sm">Soulful</span>
@@ -2022,14 +2029,14 @@
                   <p class="font-quote-italic text-[13px] text-primary italic line-clamp-2">"When you are with me, everything else falls perfectly into place."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Tum Ho Toh', 'Vishal Mishra', 'Saiyaara')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Tum Ho Toh', 'Vishal Mishra', 'Saiyaara')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
                 </div>
               </div>
 
-              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between">
+              <div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all shadow-md group flex flex-col justify-between border border-transparent hover:border-tertiary" onclick="playAudioTrack('Vaaroon Forever', 'Shreya Ghoshal', 'Mirzapur The Movie')">
                 <div class="space-y-space-sm">
                   <div class="flex items-center justify-between">
                     <span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary text-[10px] font-label-sm">Eternity</span>
@@ -2040,7 +2047,7 @@
                   <p class="font-quote-italic text-[13px] text-secondary italic line-clamp-2">"I would dedicate every lifetime entirely to loving you."</p>
                 </div>
                 <div class="mt-space-md pt-space-xs flex items-center justify-between">
-                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="playAudioTrack('Vaaroon Forever', 'Shreya Ghoshal', 'Mirzapur The Movie')">
+                  <button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm shadow hover:scale-105 transition-transform" onclick="event.stopPropagation(); playAudioTrack('Vaaroon Forever', 'Shreya Ghoshal', 'Mirzapur The Movie')">
                     <span class="material-symbols-outlined text-[16px]">play_arrow</span> Play
                   </button>
                   <span class="material-symbols-outlined text-on-surface-variant text-[18px]">music_note</span>
