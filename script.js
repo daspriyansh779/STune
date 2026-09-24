@@ -354,7 +354,6 @@ const hindiTracks = [
   { id: 532, title: "Vaaroon Forever", artist: "Shreya Ghoshal", album: "Mirzapur The Movie", duration: "4:35", file: "music/HINDI/Vaaroon Forever (Official Video)  Mirzapur The Movie  Shreya Ghoshal  Romy  Anand B  Ginny D - Excel Movies.mp3" }
 ];
 
-
 const masterPlaylist = [
   ...blackpinkTracks,
   ...btsTracks,
