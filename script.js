@@ -2,7 +2,7 @@
 // 1. LOGIN & SECURITY CONTROLLER
 // =========================================================================
 let enteredPin = "";
-const CORRECT_PIN = "20062021";
+const CORRECT_PIN = "25092026";
 
 function updatePinDisplay() {
   for (let i = 0; i < 8; i++) {
